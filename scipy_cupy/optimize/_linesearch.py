@@ -13,8 +13,8 @@ Functions
 """
 from warnings import warn
 
-from scipy.optimize import _minpack2 as minpack2
-import numpy as np
+from scipy_cupy.optimize import _minpack2 as minpack2
+import cupy as np
 
 __all__ = ['LineSearchWarning', 'line_search_wolfe1', 'line_search_wolfe2',
            'scalar_search_wolfe1', 'scalar_search_wolfe2',

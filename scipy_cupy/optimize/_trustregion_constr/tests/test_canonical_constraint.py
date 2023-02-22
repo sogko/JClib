@@ -1,8 +1,8 @@
-import numpy as np
-from numpy.testing import assert_array_equal, assert_equal
-from scipy.optimize._constraints import (NonlinearConstraint, Bounds,
+import cupy as np
+from cupy.testing import assert_array_equal, assert_equal
+from scipy_cupy.optimize._constraints import (NonlinearConstraint, Bounds,
                                          PreparedConstraint)
-from scipy.optimize._trustregion_constr.canonical_constraint \
+from scipy_cupy.optimize._trustregion_constr.canonical_constraint \
     import CanonicalConstraint, initial_constraints_as_canonical
 
 

@@ -1,16 +1,16 @@
 """Basic linear factorizations needed by the solver."""
 
-from scipy.sparse import (bmat, csc_matrix, eye, issparse)
-from scipy.sparse.linalg import LinearOperator
-import scipy.linalg
-import scipy.sparse.linalg
+from scipy_cupy.sparse import (bmat, csc_matrix, eye, issparse)
+from scipy_cupy.sparse.linalg import LinearOperator
+import scipy_cupy.linalg
+import scipy_cupy.sparse.linalg
 try:
     from sksparse.cholmod import cholesky_AAt
     sksparse_available = True
 except ImportError:
     import warnings
     sksparse_available = False
-import numpy as np
+import cupy as np
 from warnings import warn
 
 __all__ = [

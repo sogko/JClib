@@ -1,9 +1,9 @@
 """Linear least squares with bound constraints on independent variables."""
-import numpy as np
-from numpy.linalg import norm
-from scipy.sparse import issparse, csr_matrix
-from scipy.sparse.linalg import LinearOperator, lsmr
-from scipy.optimize import OptimizeResult
+import cupy as np
+from cupy.linalg import norm
+from scipy_cupy.sparse import issparse, csr_matrix
+from scipy_cupy.sparse.linalg import LinearOperator, lsmr
+from scipy_cupy.optimize import OptimizeResult
 
 from .common import in_bounds, compute_grad
 from .trf_linear import trf_linear

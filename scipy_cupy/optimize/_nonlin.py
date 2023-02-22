@@ -2,14 +2,14 @@
 # Distributed under the same license as SciPy.
 
 import sys
-import numpy as np
-from scipy.linalg import norm, solve, inv, qr, svd, LinAlgError
-from numpy import asarray, dot, vdot
-import scipy.sparse.linalg
-import scipy.sparse
-from scipy.linalg import get_blas_funcs
+import cupy as np
+from scipy_cupy.linalg import norm, solve, inv, qr, svd, LinAlgError
+from cupy import asarray, dot, vdot
+import scipy_cupy.sparse.linalg
+import scipy_cupy.sparse
+from scipy_cupy.linalg import get_blas_funcs
 import inspect
-from scipy._lib._util import getfullargspec_no_self as _getfullargspec
+from scipy_cupy._lib._util import getfullargspec_no_self as _getfullargspec
 from ._linesearch import scalar_search_wolfe1, scalar_search_armijo
 
 

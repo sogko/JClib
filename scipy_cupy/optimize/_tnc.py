@@ -34,12 +34,12 @@ value of the function, and whose second argument is the gradient of the function
 
 import warnings
 
-from scipy.optimize import _moduleTNC as moduleTNC
+from scipy_cupy.optimize import _moduleTNC as moduleTNC
 from ._optimize import (MemoizeJac, OptimizeResult, _check_unknown_options,
                        _prepare_scalar_function)
 from ._constraints import old_bound_to_new
 
-from numpy import inf, array, zeros, asfarray
+from cupy import inf, array, zeros, asfarray
 
 __all__ = ['fmin_tnc']
 

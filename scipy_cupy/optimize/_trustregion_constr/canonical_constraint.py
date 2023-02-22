@@ -1,5 +1,5 @@
-import numpy as np
-import scipy.sparse as sps
+import cupy as np
+import scipy_cupy.sparse as sps
 
 
 class CanonicalConstraint:

@@ -1,8 +1,8 @@
-import numpy as np
-import scipy.sparse as sps
+import cupy as np
+import scipy_cupy.sparse as sps
 from ._numdiff import approx_derivative, group_columns
 from ._hessian_update_strategy import HessianUpdateStrategy
-from scipy.sparse.linalg import LinearOperator
+from scipy_cupy.sparse.linalg import LinearOperator
 
 
 FD_METHODS = ('2-point', '3-point', 'cs')

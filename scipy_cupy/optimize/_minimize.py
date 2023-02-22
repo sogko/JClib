@@ -12,7 +12,7 @@ __all__ = ['minimize', 'minimize_scalar']
 
 from warnings import warn
 
-import numpy as np
+import cupy as np
 
 # unconstrained minimization
 from ._optimize import (_minimize_neldermead, _minimize_powell, _minimize_cg,

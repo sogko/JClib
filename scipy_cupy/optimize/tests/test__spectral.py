@@ -1,10 +1,10 @@
 import itertools
 
-import numpy as np
-from numpy import exp
-from numpy.testing import assert_, assert_equal
+import cupy as np
+from cupy import exp
+from cupy.testing import assert_, assert_equal
 
-from scipy.optimize import root
+from scipy_cupy.optimize import root
 
 
 def test_performance():

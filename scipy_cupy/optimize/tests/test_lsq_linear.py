@@ -1,12 +1,12 @@
 import pytest
 
-import numpy as np
-from numpy.linalg import lstsq
-from numpy.testing import assert_allclose, assert_equal, assert_
+import cupy as np
+from cupy.linalg import lstsq
+from cupy.testing import assert_allclose, assert_equal, assert_
 
-from scipy.sparse import rand, coo_matrix
-from scipy.sparse.linalg import aslinearoperator
-from scipy.optimize import lsq_linear
+from scipy_cupy.sparse import rand, coo_matrix
+from scipy_cupy.sparse.linalg import aslinearoperator
+from scipy_cupy.optimize import lsq_linear
 
 
 A = np.array([

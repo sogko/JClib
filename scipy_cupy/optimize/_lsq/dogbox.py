@@ -40,11 +40,11 @@ References
             Mathematics, Corfu, Greece, 2004.
 .. [NumOpt] J. Nocedal and S. J. Wright, "Numerical optimization, 2nd edition".
 """
-import numpy as np
-from numpy.linalg import lstsq, norm
+import cupy as np
+from cupy.linalg import lstsq, norm
 
-from scipy.sparse.linalg import LinearOperator, aslinearoperator, lsmr
-from scipy.optimize import OptimizeResult
+from scipy_cupy.sparse.linalg import LinearOperator, aslinearoperator, lsmr
+from scipy_cupy.optimize import OptimizeResult
 
 from .common import (
     step_size_to_bound, in_bounds, update_tr_radius, evaluate_quadratic,

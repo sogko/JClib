@@ -1,6 +1,6 @@
 import time
-import numpy as np
-from scipy.sparse.linalg import LinearOperator
+import cupy as np
+from scipy_cupy.sparse.linalg import LinearOperator
 from .._differentiable_functions import VectorFunction
 from .._constraints import (
     NonlinearConstraint, LinearConstraint, PreparedConstraint, strict_bounds)

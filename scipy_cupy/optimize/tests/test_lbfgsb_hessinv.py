@@ -1,7 +1,7 @@
-import numpy as np
-from numpy.testing import assert_allclose
-import scipy.linalg
-from scipy.optimize import minimize
+import cupy as np
+from cupy.testing import assert_allclose
+import scipy_cupy.linalg
+from scipy_cupy.optimize import minimize
 
 
 def test_1():

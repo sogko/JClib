@@ -1,5 +1,5 @@
 from . import __nnls
-from numpy import asarray_chkfinite, zeros, double
+from cupy import asarray_chkfinite, zeros, double
 
 __all__ = ['nnls']
 

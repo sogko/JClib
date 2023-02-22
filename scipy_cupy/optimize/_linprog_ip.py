@@ -18,11 +18,11 @@ References
 """
 # Author: Matt Haberland
 
-import numpy as np
-import scipy as sp
-import scipy.sparse as sps
+import cupy as np
+import scipy_cupy as sp
+import scipy_cupy.sparse as sps
 from warnings import warn
-from scipy.linalg import LinAlgError
+from scipy_cupy.linalg import LinAlgError
 from ._optimize import OptimizeWarning, OptimizeResult, _check_unknown_options
 from ._linprog_util import _postsolve
 has_umfpack = True

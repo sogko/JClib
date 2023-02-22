@@ -1,16 +1,16 @@
 import pytest
-import numpy as np
-from numpy.testing import (TestCase, assert_array_almost_equal,
+import cupy as np
+from cupy.testing import (TestCase, assert_array_almost_equal,
                            assert_array_equal, assert_, assert_allclose,
                            assert_equal)
-from scipy.sparse import csr_matrix
-from scipy.sparse.linalg import LinearOperator
-from scipy.optimize._differentiable_functions import (ScalarFunction,
+from scipy_cupy.sparse import csr_matrix
+from scipy_cupy.sparse.linalg import LinearOperator
+from scipy_cupy.optimize._differentiable_functions import (ScalarFunction,
                                                       VectorFunction,
                                                       LinearVectorFunction,
                                                       IdentityVectorFunction)
-from scipy.optimize import rosen, rosen_der, rosen_hess
-from scipy.optimize._hessian_update_strategy import BFGS
+from scipy_cupy.optimize import rosen, rosen_der, rosen_hess
+from scipy_cupy.optimize._hessian_update_strategy import BFGS
 
 
 class ExScalarFunction:

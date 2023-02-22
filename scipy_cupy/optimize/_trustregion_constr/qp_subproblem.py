@@ -1,9 +1,9 @@
 """Equality-constrained quadratic programming solvers."""
 
-from scipy.sparse import (linalg, bmat, csc_matrix)
+from scipy_cupy.sparse import (linalg, bmat, csc_matrix)
 from math import copysign
-import numpy as np
-from numpy.linalg import norm
+import cupy as np
+from cupy.linalg import norm
 
 __all__ = [
     'eqp_kktfact',

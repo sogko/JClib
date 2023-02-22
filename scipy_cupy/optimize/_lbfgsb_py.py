@@ -33,14 +33,14 @@ Functions
 
 ## Modifications by Travis Oliphant and Enthought, Inc. for inclusion in SciPy
 
-import numpy as np
-from numpy import array, asarray, float64, zeros
+import cupy as np
+from cupy import array, asarray, float64, zeros
 from . import _lbfgsb
 from ._optimize import (MemoizeJac, OptimizeResult,
                        _check_unknown_options, _prepare_scalar_function)
 from ._constraints import old_bound_to_new
 
-from scipy.sparse.linalg import LinearOperator
+from scipy_cupy.sparse.linalg import LinearOperator
 
 __all__ = ['fmin_l_bfgs_b', 'LbfgsInvHessProduct']
 

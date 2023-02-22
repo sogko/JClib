@@ -3,21 +3,21 @@ import pytest
 from math import sqrt, exp, sin, cos
 from functools import lru_cache
 
-from numpy.testing import (assert_warns, assert_,
+from cupy.testing import (assert_warns, assert_,
                            assert_allclose,
                            assert_equal,
                            assert_array_equal,
                            suppress_warnings)
-import numpy as np
-from numpy import finfo, power, nan, isclose
+import cupy as np
+from cupy import finfo, power, nan, isclose
 
 
-from scipy.optimize import _zeros_py as zeros, newton, root_scalar
+from scipy_cupy.optimize import _zeros_py as zeros, newton, root_scalar
 
-from scipy._lib._util import getfullargspec_no_self as _getfullargspec
+from scipy_cupy._lib._util import getfullargspec_no_self as _getfullargspec
 
 # Import testing parameters
-from scipy.optimize._tstutils import get_tests, functions as tstutils_functions, fstrings as tstutils_fstrings
+from scipy_cupy.optimize._tstutils import get_tests, functions as tstutils_functions, fstrings as tstutils_fstrings
 
 TOL = 4*np.finfo(float).eps  # tolerance
 

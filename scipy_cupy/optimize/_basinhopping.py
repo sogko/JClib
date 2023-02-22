@@ -1,10 +1,10 @@
 """
 basinhopping: The basinhopping global optimization algorithm
 """
-import numpy as np
+import cupy as np
 import math
-import scipy.optimize
-from scipy._lib._util import check_random_state
+import scipy_cupy.optimize
+from scipy_cupy._lib._util import check_random_state
 
 __all__ = ['basinhopping']
 

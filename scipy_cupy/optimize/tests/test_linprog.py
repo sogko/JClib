@@ -4,15 +4,15 @@ Unit test for Linear Programming
 import sys
 import platform
 
-import numpy as np
-from numpy.testing import (assert_, assert_allclose, assert_equal,
+import cupy as np
+from cupy.testing import (assert_, assert_allclose, assert_equal,
                            assert_array_less, assert_warns, suppress_warnings)
 from pytest import raises as assert_raises
-from scipy.optimize import linprog, OptimizeWarning
-from scipy.optimize._numdiff import approx_derivative
-from scipy.sparse.linalg import MatrixRankWarning
-from scipy.linalg import LinAlgWarning
-import scipy.sparse
+from scipy_cupy.optimize import linprog, OptimizeWarning
+from scipy_cupy.optimize._numdiff import approx_derivative
+from scipy_cupy.sparse.linalg import MatrixRankWarning
+from scipy_cupy.linalg import LinAlgWarning
+import scipy_cupy.sparse
 import pytest
 
 has_umfpack = True

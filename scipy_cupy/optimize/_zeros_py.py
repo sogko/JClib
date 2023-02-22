@@ -2,7 +2,7 @@ import warnings
 from collections import namedtuple
 import operator
 from . import _zeros
-import numpy as np
+import cupy as np
 
 
 _iter = 100

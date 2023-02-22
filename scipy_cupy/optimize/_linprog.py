@@ -14,7 +14,7 @@ Functions
 
 """
 
-import numpy as np
+import cupy as np
 
 from ._optimize import OptimizeResult, OptimizeWarning
 from warnings import warn

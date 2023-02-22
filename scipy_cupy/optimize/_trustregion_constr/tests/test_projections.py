@@ -1,9 +1,9 @@
-import numpy as np
-import scipy.linalg
-from scipy.sparse import csc_matrix
-from scipy.optimize._trustregion_constr.projections \
+import cupy as np
+import scipy_cupy.linalg
+from scipy_cupy.sparse import csc_matrix
+from scipy_cupy.optimize._trustregion_constr.projections \
     import projections, orthogonality
-from numpy.testing import (TestCase, assert_array_almost_equal,
+from cupy.testing import (TestCase, assert_array_almost_equal,
                            assert_equal, assert_allclose)
 
 try:

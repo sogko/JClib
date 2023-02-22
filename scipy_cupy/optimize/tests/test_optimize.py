@@ -11,23 +11,23 @@ To run it in its simplest form::
 """
 import itertools
 import platform
-import numpy as np
-from numpy.testing import (assert_allclose, assert_equal,
+import cupy as np
+from cupy.testing import (assert_allclose, assert_equal,
                            assert_almost_equal,
                            assert_no_warnings, assert_warns,
                            assert_array_less, suppress_warnings)
 import pytest
 from pytest import raises as assert_raises
 
-from scipy import optimize
-from scipy.optimize._minimize import Bounds, NonlinearConstraint
-from scipy.optimize._minimize import MINIMIZE_METHODS, MINIMIZE_SCALAR_METHODS
-from scipy.optimize._linprog import LINPROG_METHODS
-from scipy.optimize._root import ROOT_METHODS
-from scipy.optimize._root_scalar import ROOT_SCALAR_METHODS
-from scipy.optimize._qap import QUADRATIC_ASSIGNMENT_METHODS
-from scipy.optimize._differentiable_functions import ScalarFunction, FD_METHODS
-from scipy.optimize._optimize import MemoizeJac, show_options
+from scipy_cupy import optimize
+from scipy_cupy.optimize._minimize import Bounds, NonlinearConstraint
+from scipy_cupy.optimize._minimize import MINIMIZE_METHODS, MINIMIZE_SCALAR_METHODS
+from scipy_cupy.optimize._linprog import LINPROG_METHODS
+from scipy_cupy.optimize._root import ROOT_METHODS
+from scipy_cupy.optimize._root_scalar import ROOT_SCALAR_METHODS
+from scipy_cupy.optimize._qap import QUADRATIC_ASSIGNMENT_METHODS
+from scipy_cupy.optimize._differentiable_functions import ScalarFunction, FD_METHODS
+from scipy_cupy.optimize._optimize import MemoizeJac, show_options
 
 
 def test_check_grad():

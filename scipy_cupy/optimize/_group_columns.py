@@ -3,7 +3,7 @@ Pythran implementation of columns grouping for finite difference Jacobian
 estimation. Used by ._numdiff.group_columns and based on the Cython version.
 """
 
-import numpy as np
+import cupy as np
 
 #pythran export group_dense(int, int, intc[:,:])
 #pythran export group_dense(int, int, int[:,:])

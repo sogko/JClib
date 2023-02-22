@@ -6,7 +6,7 @@ Functions
 ---------
 - root : find a root of a scalar function.
 """
-import numpy as np
+import cupy as np
 
 from . import _zeros_py as optzeros
 

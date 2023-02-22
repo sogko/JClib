@@ -9,7 +9,7 @@ from datetime import datetime
 import os
 from os.path import join
 
-from scipy._lib._highs_utils import _highs_dir
+from scipy_cupy._lib._highs_utils import _highs_dir
 
 
 def pre_build_hook(build_ext, ext):

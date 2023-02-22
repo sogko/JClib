@@ -1,13 +1,13 @@
 import math
 from itertools import product
 
-import numpy as np
-from numpy.testing import assert_allclose, assert_equal, assert_
+import cupy as np
+from cupy.testing import assert_allclose, assert_equal, assert_
 from pytest import raises as assert_raises
 
-from scipy.sparse import csr_matrix, csc_matrix, lil_matrix
+from scipy_cupy.sparse import csr_matrix, csc_matrix, lil_matrix
 
-from scipy.optimize._numdiff import (
+from scipy_cupy.optimize._numdiff import (
     _adjust_scheme_to_bounds, approx_derivative, check_derivative,
     group_columns, _eps_for_method, _compute_absolute_step)
 

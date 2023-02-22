@@ -1,11 +1,11 @@
 """
 Unit test for DIRECT optimization algorithm.
 """
-from numpy.testing import (assert_allclose,
+from cupy.testing import (assert_allclose,
                            assert_array_less)
 import pytest
-import numpy as np
-from scipy.optimize import direct, Bounds
+import cupy as np
+from scipy_cupy.optimize import direct, Bounds
 
 
 class TestDIRECT:

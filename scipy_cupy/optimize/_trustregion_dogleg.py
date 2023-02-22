@@ -1,6 +1,6 @@
 """Dog-leg trust-region optimization."""
-import numpy as np
-import scipy.linalg
+import cupy as np
+import scipy_cupy.linalg
 from ._trustregion import (_minimize_trust_region, BaseQuadraticSubproblem)
 
 __all__ = []

@@ -1,5 +1,5 @@
-import numpy as np
-from scipy.optimize import minimize, Bounds
+import cupy as np
+from scipy_cupy.optimize import minimize, Bounds
 
 def test_gh10880():
     # checks that verbose reporting works with trust-constr for

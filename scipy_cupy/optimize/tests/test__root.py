@@ -1,11 +1,11 @@
 """
 Unit tests for optimization routines from _root.py.
 """
-from numpy.testing import assert_
+from cupy.testing import assert_
 from pytest import raises as assert_raises
-import numpy as np
+import cupy as np
 
-from scipy.optimize import root
+from scipy_cupy.optimize import root
 
 
 class TestRoot:

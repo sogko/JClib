@@ -1,11 +1,11 @@
 """Regression tests for optimize.
 
 """
-import numpy as np
-from numpy.testing import assert_almost_equal
+import cupy as np
+from cupy.testing import assert_almost_equal
 from pytest import raises as assert_raises
 
-import scipy.optimize
+import scipy_cupy.optimize
 
 
 class TestRegression:

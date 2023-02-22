@@ -3,9 +3,9 @@ Spectral Algorithm for Nonlinear Equations
 """
 import collections
 
-import numpy as np
-from scipy.optimize import OptimizeResult
-from scipy.optimize._optimize import _check_unknown_options
+import cupy as np
+from scipy_cupy.optimize import OptimizeResult
+from scipy_cupy.optimize._optimize import _check_unknown_options
 from ._linesearch import _nonmonotone_line_search_cruz, _nonmonotone_line_search_cheng
 
 class _NoConvergence(Exception):

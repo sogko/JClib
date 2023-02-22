@@ -1,5 +1,5 @@
-import numpy as np
-from scipy.optimize import _lbfgsb
+import cupy as np
+from scipy_cupy.optimize import _lbfgsb
 
 
 def objfun(x):

@@ -1,7 +1,7 @@
 """Hessian update strategies for quasi-Newton optimization methods."""
-import numpy as np
-from numpy.linalg import norm
-from scipy.linalg import get_blas_funcs
+import cupy as np
+from cupy.linalg import norm
+from scipy_cupy.linalg import get_blas_funcs
 from warnings import warn
 
 

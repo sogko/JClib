@@ -1,16 +1,16 @@
 from itertools import product
 
-import numpy as np
-from numpy.linalg import norm
-from numpy.testing import (assert_, assert_allclose,
+import cupy as np
+from cupy.linalg import norm
+from cupy.testing import (assert_, assert_allclose,
                            assert_equal, suppress_warnings)
 from pytest import raises as assert_raises
-from scipy.sparse import issparse, lil_matrix
-from scipy.sparse.linalg import aslinearoperator
+from scipy_cupy.sparse import issparse, lil_matrix
+from scipy_cupy.sparse.linalg import aslinearoperator
 
-from scipy.optimize import least_squares, Bounds
-from scipy.optimize._lsq.least_squares import IMPLEMENTED_LOSSES
-from scipy.optimize._lsq.common import EPS, make_strictly_feasible
+from scipy_cupy.optimize import least_squares, Bounds
+from scipy_cupy.optimize._lsq.least_squares import IMPLEMENTED_LOSSES
+from scipy_cupy.optimize._lsq.common import EPS, make_strictly_feasible
 
 
 def fun_trivial(x, a=0):

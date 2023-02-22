@@ -1,10 +1,10 @@
 """
 Unit test for Linear Programming via Simplex Algorithm.
 """
-import numpy as np
-from numpy.testing import assert_, assert_allclose, assert_equal
+import cupy as np
+from cupy.testing import assert_, assert_allclose, assert_equal
 from pytest import raises as assert_raises
-from scipy.optimize._linprog_util import _clean_inputs, _LPProblem
+from scipy_cupy.optimize._linprog_util import _clean_inputs, _LPProblem
 from copy import deepcopy
 from datetime import date
 

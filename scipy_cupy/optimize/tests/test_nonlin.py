@@ -2,13 +2,13 @@
 Author: Ondrej Certik
 May 2007
 """
-from numpy.testing import assert_
+from cupy.testing import assert_
 import pytest
 
-from scipy.optimize import _nonlin as nonlin, root
-from numpy import diag, dot
-from numpy.linalg import inv
-import numpy as np
+from scipy_cupy.optimize import _nonlin as nonlin, root
+from cupy import diag, dot
+from cupy.linalg import inv
+import cupy as np
 
 from .test_minpack import pressure_network
 

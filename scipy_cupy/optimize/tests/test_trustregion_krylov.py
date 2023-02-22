@@ -5,9 +5,9 @@ To run it in its simplest form::
   nosetests test_optimize.py
 
 """
-import numpy as np
-from scipy.optimize._trlib import (get_trlib_quadratic_subproblem)
-from numpy.testing import (assert_,
+import cupy as np
+from scipy_cupy.optimize._trlib import (get_trlib_quadratic_subproblem)
+from cupy.testing import (assert_,
                            assert_almost_equal,
                            assert_equal, assert_array_almost_equal)
 

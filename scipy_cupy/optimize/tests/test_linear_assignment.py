@@ -1,16 +1,16 @@
 # Author: Brian M. Clapper, G. Varoquaux, Lars Buitinck
 # License: BSD
 
-from numpy.testing import assert_array_equal
+from cupy.testing import assert_array_equal
 import pytest
 
-import numpy as np
+import cupy as np
 
-from scipy.optimize import linear_sum_assignment
-from scipy.sparse import random
-from scipy.sparse._sputils import matrix
-from scipy.sparse.csgraph import min_weight_full_bipartite_matching
-from scipy.sparse.csgraph.tests.test_matching import (
+from scipy_cupy.optimize import linear_sum_assignment
+from scipy_cupy.sparse import random
+from scipy_cupy.sparse._sputils import matrix
+from scipy_cupy.sparse.csgraph import min_weight_full_bipartite_matching
+from scipy_cupy.sparse.csgraph.tests.test_matching import (
     linear_sum_assignment_assertions, linear_sum_assignment_test_cases
 )
 

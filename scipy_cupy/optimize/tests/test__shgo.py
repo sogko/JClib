@@ -1,10 +1,10 @@
 import logging
 import numpy
-from numpy.testing import assert_allclose
+from cupy.testing import assert_allclose
 import pytest
 from pytest import raises as assert_raises, warns
-from scipy.optimize import shgo, Bounds, minimize
-from scipy.optimize._shgo import SHGO
+from scipy_cupy.optimize import shgo, Bounds, minimize
+from scipy_cupy.optimize._shgo import SHGO
 
 
 class StructTestFunction:

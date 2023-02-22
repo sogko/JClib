@@ -1,12 +1,12 @@
 """
 Tests for line search routines
 """
-from numpy.testing import (assert_equal, assert_array_almost_equal,
+from cupy.testing import (assert_equal, assert_array_almost_equal,
                            assert_array_almost_equal_nulp, assert_warns,
                            suppress_warnings)
-import scipy.optimize._linesearch as ls
-from scipy.optimize._linesearch import LineSearchWarning
-import numpy as np
+import scipy_cupy.optimize._linesearch as ls
+from scipy_cupy.optimize._linesearch import LineSearchWarning
+import cupy as np
 
 
 def assert_wolfe(s, phi, derphi, c1=1e-4, c2=0.9, err_msg=""):

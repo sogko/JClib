@@ -1,6 +1,6 @@
 """Nearly exact trust-region optimization subproblem."""
-import numpy as np
-from scipy.linalg import (norm, get_lapack_funcs, solve_triangular,
+import cupy as np
+from scipy_cupy.linalg import (norm, get_lapack_funcs, solve_triangular,
                           cho_solve)
 from ._trustregion import (_minimize_trust_region, BaseQuadraticSubproblem)
 

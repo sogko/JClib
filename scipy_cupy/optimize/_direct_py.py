@@ -3,8 +3,8 @@ from typing import (
     Any, Callable, Iterable, Optional, Tuple, TYPE_CHECKING, Union
 )
 
-import numpy as np
-from scipy.optimize import OptimizeResult
+import cupy as np
+from scipy_cupy.optimize import OptimizeResult
 from ._constraints import old_bound_to_new, Bounds
 from ._direct import direct as _direct  # type: ignore
 

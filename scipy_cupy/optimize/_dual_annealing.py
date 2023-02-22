@@ -7,12 +7,12 @@
 A Dual Annealing global optimization algorithm
 """
 
-import numpy as np
-from scipy.optimize import OptimizeResult
-from scipy.optimize import minimize, Bounds
-from scipy.special import gammaln
-from scipy._lib._util import check_random_state
-from scipy.optimize._constraints import new_bounds_to_old
+import cupy as np
+from scipy_cupy.optimize import OptimizeResult
+from scipy_cupy.optimize import minimize, Bounds
+from scipy_cupy.special import gammaln
+from scipy_cupy._lib._util import check_random_state
+from scipy_cupy.optimize._constraints import new_bounds_to_old
 
 __all__ = ['dual_annealing']
 

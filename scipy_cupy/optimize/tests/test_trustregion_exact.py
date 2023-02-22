@@ -5,13 +5,13 @@ To run it in its simplest form::
   nosetests test_optimize.py
 
 """
-import numpy as np
-from scipy.optimize._trustregion_exact import (
+import cupy as np
+from scipy_cupy.optimize._trustregion_exact import (
     estimate_smallest_singular_value,
     singular_leading_submatrix,
     IterativeSubproblem)
-from scipy.linalg import (svd, get_lapack_funcs, det, qr, norm)
-from numpy.testing import (assert_array_equal,
+from scipy_cupy.linalg import (svd, get_lapack_funcs, det, qr, norm)
+from cupy.testing import (assert_array_equal,
                            assert_equal, assert_array_almost_equal)
 
 

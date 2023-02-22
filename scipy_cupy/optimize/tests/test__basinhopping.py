@@ -3,16 +3,16 @@ Unit tests for the basin hopping global minimization algorithm.
 """
 import copy
 
-from numpy.testing import assert_almost_equal, assert_equal, assert_
+from cupy.testing import assert_almost_equal, assert_equal, assert_
 import pytest
 from pytest import raises as assert_raises
-import numpy as np
-from numpy import cos, sin
+import cupy as np
+from cupy import cos, sin
 
-from scipy.optimize import basinhopping, OptimizeResult
-from scipy.optimize._basinhopping import (
+from scipy_cupy.optimize import basinhopping, OptimizeResult
+from scipy_cupy.optimize._basinhopping import (
     Storage, RandomDisplacement, Metropolis, AdaptiveStepsize)
-from scipy._lib._pep440 import Version
+from scipy_cupy._lib._pep440 import Version
 
 
 def func1d(x):

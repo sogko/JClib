@@ -2,11 +2,11 @@
 Method agnostic utility functions for linear progamming
 """
 
-import numpy as np
-import scipy.sparse as sps
+import cupy as np
+import scipy_cupy.sparse as sps
 from warnings import warn
 from ._optimize import OptimizeWarning
-from scipy.optimize._remove_redundancy import (
+from scipy_cupy.optimize._remove_redundancy import (
     _remove_redundancy_svd, _remove_redundancy_pivot_sparse,
     _remove_redundancy_pivot_dense, _remove_redundancy_id
     )

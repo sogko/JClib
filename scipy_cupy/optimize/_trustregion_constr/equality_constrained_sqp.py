@@ -1,10 +1,10 @@
 """Byrd-Omojokun Trust-Region SQP method."""
 
-from scipy.sparse import eye as speye
+from scipy_cupy.sparse import eye as speye
 from .projections import projections
 from .qp_subproblem import modified_dogleg, projected_cg, box_intersections
-import numpy as np
-from numpy.linalg import norm
+import cupy as np
+from cupy.linalg import norm
 
 __all__ = ['equality_constrained_sqp']
 

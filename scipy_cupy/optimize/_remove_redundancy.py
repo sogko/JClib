@@ -4,11 +4,11 @@ programming equality constraints.
 """
 # Author: Matt Haberland
 
-import numpy as np
-from scipy.linalg import svd
-from scipy.linalg.interpolative import interp_decomp
+import cupy as np
+from scipy_cupy.linalg import svd
+from scipy_cupy.linalg.interpolative import interp_decomp
 import scipy
-from scipy.linalg.blas import dtrsm
+from scipy_cupy.linalg.blas import dtrsm
 
 
 def _row_count(A):

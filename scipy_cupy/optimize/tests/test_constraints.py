@@ -1,8 +1,8 @@
 import pytest
-import numpy as np
-from numpy.testing import TestCase, assert_array_equal
-import scipy.sparse as sps
-from scipy.optimize._constraints import (
+import cupy as np
+from cupy.testing import TestCase, assert_array_equal
+import scipy_cupy.sparse as sps
+from scipy_cupy.optimize._constraints import (
     Bounds, LinearConstraint, NonlinearConstraint, PreparedConstraint,
     new_bounds_to_old, old_bound_to_new, strict_bounds)
 

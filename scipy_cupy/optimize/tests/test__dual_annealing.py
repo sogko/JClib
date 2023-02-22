@@ -5,20 +5,20 @@
 """
 Unit tests for the dual annealing global optimizer
 """
-from scipy.optimize import dual_annealing, Bounds
+from scipy_cupy.optimize import dual_annealing, Bounds
 
-from scipy.optimize._dual_annealing import EnergyState
-from scipy.optimize._dual_annealing import LocalSearchWrapper
-from scipy.optimize._dual_annealing import ObjectiveFunWrapper
-from scipy.optimize._dual_annealing import StrategyChain
-from scipy.optimize._dual_annealing import VisitingDistribution
-from scipy.optimize import rosen, rosen_der
+from scipy_cupy.optimize._dual_annealing import EnergyState
+from scipy_cupy.optimize._dual_annealing import LocalSearchWrapper
+from scipy_cupy.optimize._dual_annealing import ObjectiveFunWrapper
+from scipy_cupy.optimize._dual_annealing import StrategyChain
+from scipy_cupy.optimize._dual_annealing import VisitingDistribution
+from scipy_cupy.optimize import rosen, rosen_der
 import pytest
-import numpy as np
-from numpy.testing import assert_equal, assert_allclose, assert_array_less
+import cupy as np
+from cupy.testing import assert_equal, assert_allclose, assert_array_less
 from pytest import raises as assert_raises
-from scipy._lib._util import check_random_state
-from scipy._lib._pep440 import Version
+from scipy_cupy._lib._util import check_random_state
+from scipy_cupy._lib._pep440 import Version
 
 
 class TestDualAnnealing:

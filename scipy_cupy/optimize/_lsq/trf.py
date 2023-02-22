@@ -93,11 +93,11 @@ References
 .. [JJMore] More, J. J., "The Levenberg-Marquardt Algorithm: Implementation
     and Theory," Numerical Analysis, ed. G. A. Watson, Lecture
 """
-import numpy as np
-from numpy.linalg import norm
-from scipy.linalg import svd, qr
-from scipy.sparse.linalg import lsmr
-from scipy.optimize import OptimizeResult
+import cupy as np
+from cupy.linalg import norm
+from scipy_cupy.linalg import svd, qr
+from scipy_cupy.sparse.linalg import lsmr
+from scipy_cupy.optimize import OptimizeResult
 
 from .common import (
     step_size_to_bound, find_active_constraints, in_bounds,

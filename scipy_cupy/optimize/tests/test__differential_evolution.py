@@ -4,18 +4,18 @@ Unit tests for the differential global minimization algorithm.
 import multiprocessing
 import platform
 
-from scipy.optimize._differentialevolution import (DifferentialEvolutionSolver,
+from scipy_cupy.optimize._differentialevolution import (DifferentialEvolutionSolver,
                                                    _ConstraintWrapper)
-from scipy.optimize import differential_evolution
-from scipy.optimize._constraints import (Bounds, NonlinearConstraint,
+from scipy_cupy.optimize import differential_evolution
+from scipy_cupy.optimize._constraints import (Bounds, NonlinearConstraint,
                                          LinearConstraint)
-from scipy.optimize import rosen, minimize
-from scipy.sparse import csr_matrix
-from scipy import stats
-from scipy._lib._pep440 import Version
+from scipy_cupy.optimize import rosen, minimize
+from scipy_cupy.sparse import csr_matrix
+from scipy_cupy import stats
+from scipy_cupy._lib._pep440 import Version
 
-import numpy as np
-from numpy.testing import (assert_equal, assert_allclose, assert_almost_equal,
+import cupy as np
+from cupy.testing import (assert_equal, assert_allclose, assert_almost_equal,
                            assert_string_equal, assert_, suppress_warnings)
 from pytest import raises as assert_raises, warns
 import pytest

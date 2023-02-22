@@ -14,7 +14,7 @@ References
 """
 
 import inspect
-import numpy as np
+import cupy as np
 from ._optimize import _check_unknown_options, OptimizeWarning, OptimizeResult
 from warnings import warn
 from ._highs._highs_wrapper import _highs_wrapper
@@ -53,7 +53,7 @@ from ._highs._highs_constants import (
 
     HIGHS_VAR_TYPE_CONTINUOUS,
 )
-from scipy.sparse import csc_matrix, vstack, issparse
+from scipy_cupy.sparse import csc_matrix, vstack, issparse
 
 
 def _highs_to_scipy_status_message(highs_status, highs_message):

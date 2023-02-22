@@ -1,20 +1,20 @@
 import warnings
 from . import _minpack
 
-import numpy as np
-from numpy import (atleast_1d, dot, take, triu, shape, eye,
+import cupy as np
+from cupy import (atleast_1d, dot, take, triu, shape, eye,
                    transpose, zeros, prod, greater,
                    asarray, inf,
                    finfo, inexact, issubdtype, dtype)
-from scipy import linalg
-from scipy.linalg import svd, cholesky, solve_triangular, LinAlgError, inv
-from scipy._lib._util import _asarray_validated, _lazywhere
-from scipy._lib._util import getfullargspec_no_self as _getfullargspec
+from scipy_cupy import linalg
+from scipy_cupy.linalg import svd, cholesky, solve_triangular, LinAlgError, inv
+from scipy_cupy._lib._util import _asarray_validated, _lazywhere
+from scipy_cupy._lib._util import getfullargspec_no_self as _getfullargspec
 from ._optimize import OptimizeResult, _check_unknown_options, OptimizeWarning
 from ._lsq import least_squares
 # from ._lsq.common import make_strictly_feasible
 from ._lsq.least_squares import prepare_bounds
-from scipy.optimize._minimize import Bounds
+from scipy_cupy.optimize._minimize import Bounds
 
 error = _minpack.error
 

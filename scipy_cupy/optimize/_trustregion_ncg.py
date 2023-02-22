@@ -1,8 +1,8 @@
 """Newton-CG trust-region optimization."""
 import math
 
-import numpy as np
-import scipy.linalg
+import cupy as np
+import scipy_cupy.linalg
 from ._trustregion import (_minimize_trust_region, BaseQuadraticSubproblem)
 
 __all__ = []

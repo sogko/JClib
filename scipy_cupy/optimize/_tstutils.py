@@ -38,9 +38,9 @@ Collections of test cases suitable for testing 1-D root-finders
 
 from random import random
 
-import numpy as np
+import cupy as np
 
-from scipy.optimize import _zeros_py as cc
+from scipy_cupy.optimize import _zeros_py as cc
 
 # "description" refers to the original functions
 description = """

@@ -1,13 +1,13 @@
 """
 Unit test for SLSQP optimization.
 """
-from numpy.testing import (assert_, assert_array_almost_equal,
+from cupy.testing import (assert_, assert_array_almost_equal,
                            assert_allclose, assert_equal)
 from pytest import raises as assert_raises
 import pytest
-import numpy as np
+import cupy as np
 
-from scipy.optimize import fmin_slsqp, minimize, Bounds, NonlinearConstraint
+from scipy_cupy.optimize import fmin_slsqp, minimize, Bounds, NonlinearConstraint
 
 
 class MyCallBack:

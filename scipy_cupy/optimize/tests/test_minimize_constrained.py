@@ -1,13 +1,13 @@
 
-import numpy as np
+import cupy as np
 import pytest
-from scipy.linalg import block_diag
-from scipy.sparse import csc_matrix
-from numpy.testing import (TestCase, assert_array_almost_equal,
+from scipy_cupy.linalg import block_diag
+from scipy_cupy.sparse import csc_matrix
+from cupy.testing import (TestCase, assert_array_almost_equal,
                            assert_array_less, assert_, assert_allclose,
                            suppress_warnings)
 from pytest import raises
-from scipy.optimize import (NonlinearConstraint,
+from scipy_cupy.optimize import (NonlinearConstraint,
                             LinearConstraint,
                             Bounds,
                             minimize,

@@ -1,6 +1,6 @@
 import warnings
-import numpy as np
-from scipy.sparse import csc_array, vstack
+import cupy as np
+from scipy_cupy.sparse import csc_array, vstack
 from ._highs._highs_wrapper import _highs_wrapper  # type: ignore[import]
 from ._constraints import LinearConstraint, Bounds
 from ._optimize import OptimizeResult

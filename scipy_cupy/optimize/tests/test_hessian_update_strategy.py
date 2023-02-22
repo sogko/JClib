@@ -1,9 +1,9 @@
-import numpy as np
+import cupy as np
 from copy import deepcopy
-from numpy.linalg import norm
-from numpy.testing import (TestCase, assert_array_almost_equal,
+from cupy.linalg import norm
+from cupy.testing import (TestCase, assert_array_almost_equal,
                            assert_array_equal, assert_array_less)
-from scipy.optimize import (BFGS, SR1)
+from scipy_cupy.optimize import (BFGS, SR1)
 
 
 class Rosenbrock:

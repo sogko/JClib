@@ -6,9 +6,9 @@ To run it in its simplest form::
 
 """
 import pytest
-import numpy as np
-from numpy.testing import assert_, assert_equal, assert_allclose
-from scipy.optimize import (minimize, rosen, rosen_der, rosen_hess,
+import cupy as np
+from cupy.testing import assert_, assert_equal, assert_allclose
+from scipy_cupy.optimize import (minimize, rosen, rosen_der, rosen_hess,
                             rosen_hess_prod)
 
 

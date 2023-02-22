@@ -1,14 +1,14 @@
 """Generic interface for least-squares minimization."""
 from warnings import warn
 
-import numpy as np
-from numpy.linalg import norm
+import cupy as np
+from cupy.linalg import norm
 
-from scipy.sparse import issparse
-from scipy.sparse.linalg import LinearOperator
-from scipy.optimize import _minpack, OptimizeResult
-from scipy.optimize._numdiff import approx_derivative, group_columns
-from scipy.optimize._minimize import Bounds
+from scipy_cupy.sparse import issparse
+from scipy_cupy.sparse.linalg import LinearOperator
+from scipy_cupy.optimize import _minpack, OptimizeResult
+from scipy_cupy.optimize._numdiff import approx_derivative, group_columns
+from scipy_cupy.optimize._minimize import Bounds
 
 from .trf import trf
 from .dogbox import dogbox

@@ -2,13 +2,13 @@
 Unit tests for TNC optimization routine from tnc.py
 """
 import pytest
-from numpy.testing import assert_allclose, assert_equal
+from cupy.testing import assert_allclose, assert_equal
 
-import numpy as np
+import cupy as np
 from math import pow
 
-from scipy import optimize
-from scipy.sparse._sputils import matrix
+from scipy_cupy import optimize
+from scipy_cupy.sparse._sputils import matrix
 
 
 class TestTnc:

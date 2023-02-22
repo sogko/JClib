@@ -1,12 +1,12 @@
 """Functions used by least-squares algorithms."""
 from math import copysign
 
-import numpy as np
-from numpy.linalg import norm
+import cupy as np
+from cupy.linalg import norm
 
-from scipy.linalg import cho_factor, cho_solve, LinAlgError
-from scipy.sparse import issparse
-from scipy.sparse.linalg import LinearOperator, aslinearoperator
+from scipy_cupy.linalg import cho_factor, cho_solve, LinAlgError
+from scipy_cupy.sparse import issparse
+from scipy_cupy.sparse.linalg import LinearOperator, aslinearoperator
 
 
 EPS = np.finfo(float).eps

@@ -2,12 +2,12 @@
 import math
 import warnings
 
-import numpy as np
-import scipy.linalg
+import cupy as np
+import scipy_cupy.linalg
 from ._optimize import (_check_unknown_options, _status_message,
                        OptimizeResult, _prepare_scalar_function)
-from scipy.optimize._hessian_update_strategy import HessianUpdateStrategy
-from scipy.optimize._differentiable_functions import FD_METHODS
+from scipy_cupy.optimize._hessian_update_strategy import HessianUpdateStrategy
+from scipy_cupy.optimize._differentiable_functions import FD_METHODS
 __all__ = []
 
 

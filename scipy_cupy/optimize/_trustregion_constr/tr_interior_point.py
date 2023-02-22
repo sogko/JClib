@@ -12,10 +12,10 @@ References
        Second Edition (2006).
 """
 
-import scipy.sparse as sps
-import numpy as np
+import scipy_cupy.sparse as sps
+import cupy as np
 from .equality_constrained_sqp import equality_constrained_sqp
-from scipy.sparse.linalg import LinearOperator
+from scipy_cupy.sparse.linalg import LinearOperator
 
 __all__ = ['tr_interior_point']
 

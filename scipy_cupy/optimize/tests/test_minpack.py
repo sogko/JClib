@@ -4,19 +4,19 @@ Unit tests for optimization routines from minpack.py.
 import warnings
 import pytest
 
-from numpy.testing import (assert_, assert_almost_equal, assert_array_equal,
+from cupy.testing import (assert_, assert_almost_equal, assert_array_equal,
                            assert_array_almost_equal, assert_allclose,
                            assert_warns, suppress_warnings)
 from pytest import raises as assert_raises
-import numpy as np
-from numpy import array, float64
+import cupy as np
+from cupy import array, float64
 from multiprocessing.pool import ThreadPool
 
-from scipy import optimize, linalg
-from scipy.special import lambertw
-from scipy.optimize._minpack_py import leastsq, curve_fit, fixed_point
-from scipy.optimize import OptimizeWarning
-from scipy.optimize._minimize import Bounds
+from scipy_cupy import optimize, linalg
+from scipy_cupy.special import lambertw
+from scipy_cupy.optimize._minpack_py import leastsq, curve_fit, fixed_point
+from scipy_cupy.optimize import OptimizeWarning
+from scipy_cupy.optimize._minimize import Bounds
 
 
 class ReturnShape:

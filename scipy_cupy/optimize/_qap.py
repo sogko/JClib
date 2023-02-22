@@ -1,9 +1,9 @@
-import numpy as np
+import cupy as np
 import operator
 from . import (linear_sum_assignment, OptimizeResult)
 from ._optimize import _check_unknown_options
 
-from scipy._lib._util import check_random_state
+from scipy_cupy._lib._util import check_random_state
 import itertools
 
 QUADRATIC_ASSIGNMENT_METHODS = ['faq', '2opt']

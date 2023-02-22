@@ -1,9 +1,9 @@
 """Routines for numerical differentiation."""
 import functools
-import numpy as np
-from numpy.linalg import norm
+import cupy as np
+from cupy.linalg import norm
 
-from scipy.sparse.linalg import LinearOperator
+from scipy_cupy.sparse.linalg import LinearOperator
 from ..sparse import issparse, csc_matrix, csr_matrix, coo_matrix, find
 from ._group_columns import group_dense, group_sparse
 

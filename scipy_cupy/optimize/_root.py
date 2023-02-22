@@ -7,7 +7,7 @@ Functions
 """
 __all__ = ['root']
 
-import numpy as np
+import cupy as np
 
 ROOT_METHODS = ['hybr', 'lm', 'broyden1', 'broyden2', 'anderson',
                 'linearmixing', 'diagbroyden', 'excitingmixing', 'krylov',

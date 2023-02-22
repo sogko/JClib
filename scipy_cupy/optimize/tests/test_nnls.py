@@ -2,14 +2,14 @@
 Author: Uwe Schmitt
 Sep 2008
 """
-import numpy as np
+import cupy as np
 
-from numpy.testing import assert_
+from cupy.testing import assert_
 from pytest import raises as assert_raises
 
-from scipy.optimize import nnls
-from numpy import arange, dot
-from numpy.linalg import norm
+from scipy_cupy.optimize import nnls
+from cupy import arange, dot
+from cupy.linalg import norm
 
 
 class TestNNLS:

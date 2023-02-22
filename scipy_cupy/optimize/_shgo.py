@@ -2,15 +2,15 @@
 shgo: The simplicial homology global optimisation algorithm
 """
 
-import numpy as np
+import cupy as np
 import time
 import logging
 import warnings
-from scipy import spatial
-from scipy.optimize import OptimizeResult, minimize, Bounds
-from scipy.optimize._constraints import new_bounds_to_old
+from scipy_cupy import spatial
+from scipy_cupy.optimize import OptimizeResult, minimize, Bounds
+from scipy_cupy.optimize._constraints import new_bounds_to_old
 from ._optimize import _wrap_scalar_function
-from scipy.optimize._shgo_lib.triangulation import Complex
+from scipy_cupy.optimize._shgo_lib.triangulation import Complex
 
 
 __all__ = ['shgo']

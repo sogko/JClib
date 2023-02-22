@@ -4,14 +4,14 @@ Added by Andrew Nelson 2014
 """
 import warnings
 
-import numpy as np
-from scipy.optimize import OptimizeResult, minimize
-from scipy.optimize._optimize import _status_message
-from scipy._lib._util import check_random_state, MapWrapper, _FunctionWrapper
+import cupy as np
+from scipy_cupy.optimize import OptimizeResult, minimize
+from scipy_cupy.optimize._optimize import _status_message
+from scipy_cupy._lib._util import check_random_state, MapWrapper, _FunctionWrapper
 
-from scipy.optimize._constraints import (Bounds, new_bounds_to_old,
+from scipy_cupy.optimize._constraints import (Bounds, new_bounds_to_old,
                                          NonlinearConstraint, LinearConstraint)
-from scipy.sparse import issparse
+from scipy_cupy.sparse import issparse
 
 __all__ = ['differential_evolution']
 

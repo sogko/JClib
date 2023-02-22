@@ -13,8 +13,8 @@ wrapper named after the zero function. See the private ``_zeros`` Cython module
 in `scipy.optimize.cython_optimze` for more information.
 """
 
-import numpy.testing as npt
-from scipy.optimize.cython_optimize import _zeros
+import cupy.testing as npt
+from scipy_cupy.optimize.cython_optimize import _zeros
 
 # CONSTANTS
 # Solve x**3 - A0 = 0  for A0 = [2.0, 2.1, ..., 2.9].
