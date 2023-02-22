@@ -2,7 +2,7 @@
 import cupy as np
 from cupy.testing import assert_equal, assert_allclose
 from scipy_cupy.integrate import odeint
-import scipy.integrate._test_odeint_banded as banded5x5
+import scipy_cupy.integrate._test_odeint_banded as banded5x5
 
 
 def rhs(y, t):
