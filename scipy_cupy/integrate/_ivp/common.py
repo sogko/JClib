@@ -1,8 +1,7 @@
 from itertools import groupby
 from warnings import warn
-# import numpy as np
-import cupy as np
-from scipy_cupy.sparse import find, coo_matrix
+import numpy as np
+from scipy.sparse import find, coo_matrix
 
 
 EPS = np.finfo(float).eps
@@ -44,8 +43,7 @@ def warn_extraneous(extraneous):
 def validate_tol(rtol, atol, n):
     """Validate tolerance values."""
 
-    # sgk - cupy.any requires ndarray
-    if np.any(np.array(rtol < 100 * EPS)):
+    if np.any(rtol < 100 * EPS):
         warn("At least one element of `rtol` is too small. "
              f"Setting `rtol = np.maximum(rtol, {100 * EPS})`.")
         rtol = np.maximum(rtol, 100 * EPS)
@@ -54,8 +52,7 @@ def validate_tol(rtol, atol, n):
     if atol.ndim > 0 and atol.shape != (n,):
         raise ValueError("`atol` has wrong shape.")
 
-    # sgk - cupy.any requires ndarray
-    if np.any(np.array(atol < 0)):
+    if np.any(atol < 0):
         raise ValueError("`atol` must be positive.")
 
     return rtol, atol

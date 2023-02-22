@@ -27,18 +27,18 @@ __docformat__ = "restructuredtext en"
 
 import warnings
 import sys
-from numpy import (atleast_1d, eye, argmin, zeros, shape, squeeze,
+from cupy import (atleast_1d, eye, argmin, zeros, shape, squeeze,
                    asarray, sqrt, Inf, asfarray)
-import numpy as np
-from scipy.sparse.linalg import LinearOperator
+import cupy as np
+from scipy_cupy.sparse.linalg import LinearOperator
 from ._linesearch import (line_search_wolfe1, line_search_wolfe2,
                           line_search_wolfe2 as line_search,
                           LineSearchWarning)
 from ._numdiff import approx_derivative
 from ._hessian_update_strategy import HessianUpdateStrategy
-from scipy._lib._util import getfullargspec_no_self as _getfullargspec
-from scipy._lib._util import MapWrapper, check_random_state
-from scipy.optimize._differentiable_functions import ScalarFunction, FD_METHODS
+from scipy_cupy._lib._util import getfullargspec_no_self as _getfullargspec
+from scipy_cupy._lib._util import MapWrapper, check_random_state
+from scipy_cupy.optimize._differentiable_functions import ScalarFunction, FD_METHODS
 
 
 # standard status messages of optimizers
