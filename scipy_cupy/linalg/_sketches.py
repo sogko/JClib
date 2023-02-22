@@ -3,10 +3,10 @@
 # Author: Jordi Montes <jomsdev@gmail.com>
 # August 28, 2017
 
-import numpy as np
+import cupy as np
 
-from scipy._lib._util import check_random_state, rng_integers
-from scipy.sparse import csc_matrix
+from scipy_cupy._lib._util import check_random_state, rng_integers
+from scipy_cupy.sparse import csc_matrix
 
 __all__ = ['clarkson_woodruff_transform']
 

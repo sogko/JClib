@@ -7,19 +7,19 @@
 import random
 import functools
 
-import numpy as np
-from numpy import array, identity, dot, sqrt
-from numpy.testing import (assert_array_almost_equal, assert_allclose, assert_,
+import cupy as np
+from cupy import array, identity, dot, sqrt
+from cupy.testing import (assert_array_almost_equal, assert_allclose, assert_,
                            assert_array_less, assert_array_equal, assert_warns)
 import pytest
 
-import scipy.linalg
-from scipy.linalg import (funm, signm, logm, sqrtm, fractional_matrix_power,
+import scipy_cupy.linalg
+from scipy_cupy.linalg import (funm, signm, logm, sqrtm, fractional_matrix_power,
                           expm, expm_frechet, expm_cond, norm, khatri_rao)
-from scipy.linalg import _matfuncs_inv_ssq
-import scipy.linalg._expm_frechet
+from scipy_cupy.linalg import _matfuncs_inv_ssq
+from scipy_cupy.linalg._expm_frechet
 
-from scipy.optimize import minimize
+from scipy_cupy.optimize import minimize
 
 
 def _get_al_mohy_higham_2012_experiment_1():

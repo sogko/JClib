@@ -149,7 +149,7 @@ Raw function pointers (Fortran-style pointer arguments):
 cdef extern from "fortran_defs.h":
     pass
 
-from numpy cimport npy_complex64, npy_complex128
+from cupy cimport npy_complex64, npy_complex128
 
 '''
 
@@ -196,7 +196,7 @@ Raw function pointers (Fortran-style pointer arguments):
 cdef extern from "fortran_defs.h":
     pass
 
-from numpy cimport npy_complex64, npy_complex128
+from cupy cimport npy_complex64, npy_complex128
 
 cdef extern from "_lapack_subroutines.h":
     # Function pointer type declarations for

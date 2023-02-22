@@ -1,4 +1,4 @@
-from scipy.linalg import norm
+from scipy_cupy.linalg import norm
 
 
 def test_norm():

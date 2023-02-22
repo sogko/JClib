@@ -2,7 +2,7 @@
 
 from warnings import warn
 
-from numpy import asarray, asarray_chkfinite
+from cupy import asarray, asarray_chkfinite
 
 # Local imports
 from ._misc import _datacopied, LinAlgWarning

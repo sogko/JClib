@@ -1,9 +1,9 @@
 """Test functions for linalg._solve_toeplitz module
 """
-import numpy as np
-from scipy.linalg._solve_toeplitz import levinson
-from scipy.linalg import solve, toeplitz, solve_toeplitz
-from numpy.testing import assert_equal, assert_allclose
+import cupy as np
+from scipy_cupy.linalg._solve_toeplitz import levinson
+from scipy_cupy.linalg import solve, toeplitz, solve_toeplitz
+from cupy.testing import assert_equal, assert_allclose
 
 import pytest
 from pytest import raises as assert_raises

@@ -1,7 +1,7 @@
 from warnings import warn
 
-import numpy as np
-from numpy import (atleast_2d, ComplexWarning, arange, zeros_like, imag, diag,
+import cupy as np
+from cupy import (atleast_2d, ComplexWarning, arange, zeros_like, imag, diag,
                    iscomplexobj, tril, triu, argsort, empty_like)
 from ._decomp import _asarray_validated
 from .lapack import get_lapack_funcs, _compute_lwork

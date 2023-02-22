@@ -207,10 +207,10 @@ BLAS Level 3 functions
 
 __all__ = ['get_blas_funcs', 'find_best_blas_type']
 
-import numpy as _np
+import cupy as _np
 import functools
 
-from scipy.linalg import _fblas
+from scipy_cupy.linalg import _fblas
 try:
     from scipy.linalg import _cblas
 except ImportError:
@@ -225,7 +225,7 @@ except ImportError:
 
 # Expose all functions (only fblas --- cblas is an implementation detail)
 empty_module = None
-from scipy.linalg._fblas import *
+from scipy_cupy.linalg._fblas import *
 del empty_module
 
 # all numeric dtypes '?bBhHiIlLqQefdgFDGO' that are safe to be converted to

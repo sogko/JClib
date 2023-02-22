@@ -1,4 +1,4 @@
-from numpy.typing import NDArray
+from cupy.typing import NDArray
 from typing import Any, Tuple
 
 def pick_pade_structure(a: NDArray[Any]) -> Tuple[int, int]: ...

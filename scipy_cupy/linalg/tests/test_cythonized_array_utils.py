@@ -1,5 +1,5 @@
-import numpy as np
-from scipy.linalg import bandwidth, issymmetric, ishermitian
+import cupy as np
+from scipy_cupy.linalg import bandwidth, issymmetric, ishermitian
 import pytest
 from pytest import raises
 

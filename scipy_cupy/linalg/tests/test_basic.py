@@ -2,27 +2,27 @@ import platform
 import itertools
 import warnings
 
-import numpy as np
-from numpy import (arange, array, dot, zeros, identity, conjugate, transpose,
+import cupy as np
+from cupy import (arange, array, dot, zeros, identity, conjugate, transpose,
                    float32)
-import numpy.linalg as linalg
-from numpy.random import random
+import cupy.linalg as linalg
+from cupy.random import random
 
-from numpy.testing import (assert_equal, assert_almost_equal, assert_,
+from cupy.testing import (assert_equal, assert_almost_equal, assert_,
                            assert_array_almost_equal, assert_allclose,
                            assert_array_equal, suppress_warnings)
 import pytest
 from pytest import raises as assert_raises
 
-from scipy._lib import _pep440
-from scipy.linalg import (solve, inv, det, lstsq, pinv, pinvh, norm,
+from scipy_cupy._lib import _pep440
+from scipy_cupy.linalg import (solve, inv, det, lstsq, pinv, pinvh, norm,
                           solve_banded, solveh_banded, solve_triangular,
                           solve_circulant, circulant, LinAlgError, block_diag,
                           matrix_balance, qr, LinAlgWarning)
 
-from scipy.linalg._testutils import assert_no_overwrite
-from scipy._lib._testutils import check_free_memory
-from scipy.linalg.blas import HAS_ILP64
+from scipy_cupy.linalg._testutils import assert_no_overwrite
+from scipy_cupy._lib._testutils import check_free_memory
+from scipy_cupy.linalg.blas import HAS_ILP64
 
 REAL_DTYPES = (np.float32, np.float64, np.longdouble)
 COMPLEX_DTYPES = (np.complex64, np.complex128, np.clongdouble)

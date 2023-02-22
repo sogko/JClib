@@ -6,9 +6,9 @@ This module exists to avoid cyclic imports.
 """
 __all__ = ['sqrtm']
 
-import numpy as np
+import cupy as np
 
-from scipy._lib._util import _asarray_validated
+from scipy_cupy._lib._util import _asarray_validated
 
 
 # Local imports

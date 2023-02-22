@@ -5,8 +5,8 @@
 #              and Jake Vanderplas, August 2012
 
 from warnings import warn
-import numpy as np
-from numpy import atleast_1d, atleast_2d
+import cupy as np
+from cupy import atleast_1d, atleast_2d
 from ._flinalg_py import get_flinalg_funcs
 from .lapack import get_lapack_funcs, _compute_lwork
 from ._misc import LinAlgError, _datacopied, LinAlgWarning

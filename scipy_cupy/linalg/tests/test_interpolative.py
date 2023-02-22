@@ -26,13 +26,13 @@
 #   POSSIBILITY OF SUCH DAMAGE.
 #******************************************************************************
 
-import scipy.linalg.interpolative as pymatrixid
-import numpy as np
-from scipy.linalg import hilbert, svdvals, norm
-from scipy.sparse.linalg import aslinearoperator
-from scipy.linalg.interpolative import interp_decomp
+from scipy_cupy.linalg.interpolative as pymatrixid
+import cupy as np
+from scipy_cupy.linalg import hilbert, svdvals, norm
+from scipy_cupy.sparse.linalg import aslinearoperator
+from scipy_cupy.linalg.interpolative import interp_decomp
 
-from numpy.testing import (assert_, assert_allclose, assert_equal,
+from cupy.testing import (assert_, assert_allclose, assert_equal,
                            assert_array_equal)
 import pytest
 from pytest import raises as assert_raises

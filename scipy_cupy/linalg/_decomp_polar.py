@@ -1,5 +1,5 @@
-import numpy as np
-from scipy.linalg import svd
+import cupy as np
+from scipy_cupy.linalg import svd
 
 
 __all__ = ['polar']

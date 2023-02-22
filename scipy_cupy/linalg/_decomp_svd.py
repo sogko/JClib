@@ -1,6 +1,6 @@
 """SVD decomposition functions."""
 import numpy
-from numpy import zeros, r_, diag, dot, arccos, arcsin, where, clip
+from cupy import zeros, r_, diag, dot, arccos, arcsin, where, clip
 
 # Local imports.
 from ._misc import LinAlgError, _datacopied

@@ -9,8 +9,9 @@
 # September 13, 2016
 
 import warnings
-import numpy as np
-from numpy.linalg import inv, LinAlgError, norm, cond, svd
+import cupy as np
+from numpy.linalg import cond # sgk no_cupy_equivalent
+from cupy.linalg import inv, LinAlgError, norm, svd
 
 from ._basic import solve, solve_triangular, matrix_balance
 from .lapack import get_lapack_funcs

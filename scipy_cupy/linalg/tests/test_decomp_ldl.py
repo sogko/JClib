@@ -1,12 +1,12 @@
-from numpy.testing import assert_array_almost_equal, assert_allclose, assert_
-from numpy import (array, eye, zeros, empty_like, empty, tril_indices_from,
+from cupy.testing import assert_array_almost_equal, assert_allclose, assert_
+from cupy import (array, eye, zeros, empty_like, empty, tril_indices_from,
                    tril, triu_indices_from, spacing, float32, float64,
                    complex64, complex128)
-from numpy.random import rand, randint, seed
-from scipy.linalg import ldl
+from cupy.random import rand, randint, seed
+from scipy_cupy.linalg import ldl
 import pytest
 from pytest import raises as assert_raises, warns
-from numpy import ComplexWarning
+from cupy import ComplexWarning
 
 
 def test_args():

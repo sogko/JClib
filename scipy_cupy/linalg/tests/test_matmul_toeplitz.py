@@ -1,11 +1,11 @@
 """Test functions for linalg.matmul_toeplitz function
 """
 
-import numpy as np
-from scipy.linalg import toeplitz, matmul_toeplitz
+import cupy as np
+from scipy_cupy.linalg import toeplitz, matmul_toeplitz
 
 from pytest import raises as assert_raises
-from numpy.testing import assert_allclose
+from cupy.testing import assert_allclose
 
 
 class TestMatmulToeplitz:

@@ -1,6 +1,6 @@
 import math
-import numpy as np
-from numpy.lib.stride_tricks import as_strided
+import cupy as np
+from cupy.lib.stride_tricks import as_strided
 
 __all__ = ['tri', 'tril', 'triu', 'toeplitz', 'circulant', 'hankel',
            'hadamard', 'leslie', 'kron', 'block_diag', 'companion',

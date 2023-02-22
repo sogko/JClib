@@ -5,33 +5,33 @@
 import sys
 from functools import reduce
 
-from numpy.testing import (assert_equal, assert_array_almost_equal, assert_,
+from cupy.testing import (assert_equal, assert_array_almost_equal, assert_,
                            assert_allclose, assert_almost_equal,
                            assert_array_equal)
 import pytest
 from pytest import raises as assert_raises
 
-import numpy as np
-from numpy import (eye, ones, zeros, zeros_like, triu, tril, tril_indices,
+import cupy as np
+from cupy import (eye, ones, zeros, zeros_like, triu, tril, tril_indices,
                    triu_indices)
 
-from numpy.random import rand, randint, seed
+from cupy.random import rand, randint, seed
 
-from scipy.linalg import (_flapack as flapack, lapack, inv, svd, cholesky,
+from scipy_cupy.linalg import (_flapack as flapack, lapack, inv, svd, cholesky,
                           solve, ldl, norm, block_diag, qr, eigh)
 
-from scipy.linalg.lapack import _compute_lwork
-from scipy.stats import ortho_group, unitary_group
+from scipy_cupy.linalg.lapack import _compute_lwork
+from scipy_cupy.stats import ortho_group, unitary_group
 
 
-import scipy.sparse as sps
+from scipy_cupy.sparse as sps
 
 try:
     from scipy.linalg import _clapack as clapack
 except ImportError:
     clapack = None
-from scipy.linalg.lapack import get_lapack_funcs
-from scipy.linalg.blas import get_blas_funcs
+from scipy_cupy.linalg.lapack import get_lapack_funcs
+from scipy_cupy.linalg.blas import get_blas_funcs
 
 REAL_DTYPES = [np.float32, np.float64]
 COMPLEX_DTYPES = [np.complex64, np.complex128]

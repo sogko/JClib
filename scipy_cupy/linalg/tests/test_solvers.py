@@ -1,15 +1,15 @@
 import os
-import numpy as np
+import cupy as np
 
-from numpy.testing import assert_array_almost_equal
+from cupy.testing import assert_array_almost_equal
 import pytest
 from pytest import raises as assert_raises
 
-from scipy.linalg import solve_sylvester
-from scipy.linalg import solve_continuous_lyapunov, solve_discrete_lyapunov
-from scipy.linalg import solve_continuous_are, solve_discrete_are
-from scipy.linalg import block_diag, solve, LinAlgError
-from scipy.sparse._sputils import matrix
+from scipy_cupy.linalg import solve_sylvester
+from scipy_cupy.linalg import solve_continuous_lyapunov, solve_discrete_lyapunov
+from scipy_cupy.linalg import solve_continuous_are, solve_discrete_are
+from scipy_cupy.linalg import block_diag, solve, LinAlgError
+from scipy_cupy.sparse._sputils import matrix
 
 
 def _load_data(name):

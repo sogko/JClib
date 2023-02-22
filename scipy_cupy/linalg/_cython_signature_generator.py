@@ -15,7 +15,7 @@ the oldest supported version of LAPACK (currently 3.4.0).
 
 import glob
 import os
-from numpy.f2py import crackfortran
+from cupy.f2py import crackfortran
 
 sig_types = {'integer': 'int',
              'complex': 'c',

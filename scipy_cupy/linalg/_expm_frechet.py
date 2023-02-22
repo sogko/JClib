@@ -1,6 +1,6 @@
 """Frechet derivative of the matrix exponential."""
-import numpy as np
-import scipy.linalg
+import cupy as np
+import scipy_cupy.linalg
 
 __all__ = ['expm_frechet', 'expm_cond']
 

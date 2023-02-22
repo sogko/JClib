@@ -1,11 +1,11 @@
 import pytest
-import numpy as np
-from numpy.random import seed
-from numpy.testing import assert_allclose
+import cupy as np
+from cupy.random import seed
+from cupy.testing import assert_allclose
 
-from scipy.linalg.lapack import _compute_lwork
-from scipy.stats import ortho_group, unitary_group
-from scipy.linalg import cossin, get_lapack_funcs
+from scipy_cupy.linalg.lapack import _compute_lwork
+from scipy_cupy.stats import ortho_group, unitary_group
+from scipy_cupy.linalg import cossin, get_lapack_funcs
 
 REAL_DTYPES = (np.float32, np.float64)
 COMPLEX_DTYPES = (np.complex64, np.complex128)

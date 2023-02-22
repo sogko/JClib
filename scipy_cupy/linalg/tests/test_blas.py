@@ -11,17 +11,17 @@ Run tests if scipy is installed:
 
 import math
 import pytest
-import numpy as np
-from numpy.testing import (assert_equal, assert_almost_equal, assert_,
+import cupy as np
+from cupy.testing import (assert_equal, assert_almost_equal, assert_,
                            assert_array_almost_equal, assert_allclose)
 from pytest import raises as assert_raises
 
-from numpy import float32, float64, complex64, complex128, arange, triu, \
+from cupy import float32, float64, complex64, complex128, arange, triu, \
                   tril, zeros, tril_indices, ones, mod, diag, append, eye, \
                   nonzero
 
-from numpy.random import rand, seed
-from scipy.linalg import _fblas as fblas, get_blas_funcs, toeplitz, solve
+from cupy.random import rand, seed
+from scipy_cupy.linalg import _fblas as fblas, get_blas_funcs, toeplitz, solve
 
 try:
     from scipy.linalg import _cblas as cblas

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from collections.abc import Iterable
-import numpy as np
+import cupy as np
 
-from scipy._lib._util import _asarray_validated
-from scipy.linalg import block_diag, LinAlgError
+from scipy_cupy._lib._util import _asarray_validated
+from scipy_cupy.linalg import block_diag, LinAlgError
 from .lapack import _compute_lwork, get_lapack_funcs
 
 __all__ = ['cossin']

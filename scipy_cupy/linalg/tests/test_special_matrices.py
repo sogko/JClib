@@ -1,19 +1,19 @@
 
 import pytest
-import numpy as np
-from numpy import arange, add, array, eye, copy, sqrt
-from numpy.testing import (assert_equal, assert_array_equal,
+import cupy as np
+from cupy import arange, add, array, eye, copy, sqrt
+from cupy.testing import (assert_equal, assert_array_equal,
                            assert_array_almost_equal, assert_allclose)
 from pytest import raises as assert_raises
 
-from scipy.fft import fft
-from scipy.special import comb
-from scipy.linalg import (toeplitz, hankel, circulant, hadamard, leslie, dft,
+from scipy_cupy.fft import fft
+from scipy_cupy.special import comb
+from scipy_cupy.linalg import (toeplitz, hankel, circulant, hadamard, leslie, dft,
                           companion, tri, triu, tril, kron, block_diag,
                           helmert, hilbert, invhilbert, pascal, invpascal,
                           fiedler, fiedler_companion, eigvals,
                           convolution_matrix)
-from numpy.linalg import cond
+from cupy.linalg import cond
 
 
 def get_mat(n):

@@ -12,40 +12,40 @@ import itertools
 import platform
 import sys
 
-import numpy as np
-from numpy.testing import (assert_equal, assert_almost_equal,
+import cupy as np
+from cupy.testing import (assert_equal, assert_almost_equal,
                            assert_array_almost_equal, assert_array_equal,
                            assert_, assert_allclose)
 
 import pytest
 from pytest import raises as assert_raises
 
-from scipy.linalg import (eig, eigvals, lu, svd, svdvals, cholesky, qr,
+from scipy_cupy.linalg import (eig, eigvals, lu, svd, svdvals, cholesky, qr,
                           schur, rsf2csf, lu_solve, lu_factor, solve, diagsvd,
                           hessenberg, rq, eig_banded, eigvals_banded, eigh,
                           eigvalsh, qr_multiply, qz, orth, ordqz,
                           subspace_angles, hadamard, eigvalsh_tridiagonal,
                           eigh_tridiagonal, null_space, cdf2rdf, LinAlgError)
 
-from scipy.linalg.lapack import (dgbtrf, dgbtrs, zgbtrf, zgbtrs, dsbev,
+from scipy_cupy.linalg.lapack import (dgbtrf, dgbtrs, zgbtrf, zgbtrs, dsbev,
                                  dsbevd, dsbevx, zhbevd, zhbevx,
                                  get_lapack_funcs)
 
-from scipy.linalg._misc import norm
-from scipy.linalg._decomp_qz import _select_function
-from scipy.stats import ortho_group
+from scipy_cupy.linalg._misc import norm
+from scipy_cupy.linalg._decomp_qz import _select_function
+from scipy_cupy.stats import ortho_group
 
-from numpy import (array, diag, ones, full, linalg, argsort, zeros, arange,
+from cupy import (array, diag, ones, full, linalg, argsort, zeros, arange,
                    float32, complex64, ravel, sqrt, iscomplex, shape, sort,
                    sign, asarray, isfinite, ndarray, eye, dtype, triu, tril)
 
-from numpy.random import seed, random
+from cupy.random import seed, random
 
-from scipy.linalg._testutils import assert_no_overwrite
-from scipy.sparse._sputils import matrix
+from scipy_cupy.linalg._testutils import assert_no_overwrite
+from scipy_cupy.sparse._sputils import matrix
 
-from scipy._lib._testutils import check_free_memory
-from scipy.linalg.blas import HAS_ILP64
+from scipy_cupy._lib._testutils import check_free_memory
+from scipy_cupy.linalg.blas import HAS_ILP64
 
 
 def _random_hermitian_matrix(n, posdef=False, dtype=float):

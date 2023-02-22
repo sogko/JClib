@@ -1,7 +1,7 @@
-import numpy as np
-from numpy.linalg import norm
-from numpy.testing import (assert_, assert_allclose, assert_equal)
-from scipy.linalg import polar, eigh
+import cupy as np
+from cupy.linalg import norm
+from cupy.testing import (assert_, assert_allclose, assert_equal)
+from scipy_cupy.linalg import polar, eigh
 
 
 diag2 = np.array([[2, 0], [0, 3]])

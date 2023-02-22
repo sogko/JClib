@@ -4,15 +4,15 @@ Matrix functions that use Pade approximation with inverse scaling and squaring.
 """
 import warnings
 
-import numpy as np
+import cupy as np
 
-from scipy.linalg._matfuncs_sqrtm import SqrtmError, _sqrtm_triu
-from scipy.linalg._decomp_schur import schur, rsf2csf
-from scipy.linalg._matfuncs import funm
-from scipy.linalg import svdvals, solve_triangular
-from scipy.sparse.linalg._interface import LinearOperator
-from scipy.sparse.linalg import onenormest
-import scipy.special
+from scipy_cupy.linalg._matfuncs_sqrtm import SqrtmError, _sqrtm_triu
+from scipy_cupy.linalg._decomp_schur import schur, rsf2csf
+from scipy_cupy.linalg._matfuncs import funm
+from scipy_cupy.linalg import svdvals, solve_triangular
+from scipy_cupy.sparse.linalg._interface import LinearOperator
+from scipy_cupy.sparse.linalg import onenormest
+from scipy_cupy.special
 
 
 class LogmRankWarning(UserWarning):

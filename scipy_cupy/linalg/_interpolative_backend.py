@@ -31,8 +31,8 @@
 Direct wrappers for Fortran `id_dist` backend.
 """
 
-import scipy.linalg._interpolative as _id
-import numpy as np
+import scipy_cupy.linalg._interpolative as _id
+import cupy as np
 
 _RETCODE_ERROR = RuntimeError("nonzero return code")
 

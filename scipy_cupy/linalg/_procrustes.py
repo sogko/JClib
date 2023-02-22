@@ -2,7 +2,7 @@
 Solve the orthogonal Procrustes problem.
 
 """
-import numpy as np
+import cupy as np
 from ._decomp_svd import svd
 
 

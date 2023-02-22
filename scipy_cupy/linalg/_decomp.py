@@ -20,11 +20,12 @@ __all__ = ['eig', 'eigvals', 'eigh', 'eigvalsh',
 import warnings
 
 import numpy
-from numpy import (array, isfinite, inexact, nonzero, iscomplexobj, cast,
+from numpy import cast # sgk no_cupy_equivalent
+from cupy import (array, isfinite, inexact, nonzero, iscomplexobj,
                    flatnonzero, conj, asarray, argsort, empty,
                    iscomplex, zeros, einsum, eye, inf)
 # Local imports
-from scipy._lib._util import _asarray_validated
+from scipy_cupy._lib._util import _asarray_validated
 from ._misc import LinAlgError, _datacopied, norm
 from .lapack import get_lapack_funcs, _compute_lwork
 

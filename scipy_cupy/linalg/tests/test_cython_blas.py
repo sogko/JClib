@@ -1,7 +1,7 @@
-import numpy as np
-from numpy.testing import (assert_allclose,
+import cupy as np
+from cupy.testing import (assert_allclose,
                            assert_equal)
-import scipy.linalg.cython_blas as blas
+from scipy_cupy.linalg.cython_blas as blas
 
 class TestDGEMM:
     

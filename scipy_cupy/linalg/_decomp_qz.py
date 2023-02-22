@@ -1,7 +1,7 @@
 import warnings
 
-import numpy as np
-from numpy import asarray_chkfinite
+import cupy as np
+from cupy import asarray_chkfinite
 from ._misc import LinAlgError, _datacopied, LinAlgWarning
 from .lapack import get_lapack_funcs
 

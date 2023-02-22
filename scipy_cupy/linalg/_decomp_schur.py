@@ -1,7 +1,7 @@
 """Schur decomposition functions."""
 import numpy
-from numpy import asarray_chkfinite, single, asarray, array
-from numpy.linalg import norm
+from cupy import asarray_chkfinite, single, asarray, array
+from cupy.linalg import norm
 
 
 # Local imports.

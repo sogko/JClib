@@ -819,9 +819,9 @@ All functions
 # Author: Pearu Peterson, March 2002
 #
 
-import numpy as _np
+import cupy as _np
 from .blas import _get_funcs, _memoize_get_funcs
-from scipy.linalg import _flapack
+from scipy_cupy.linalg import _flapack
 from re import compile as regex_compile
 try:
     from scipy.linalg import _clapack
@@ -838,7 +838,7 @@ except ImportError:
 
 # Expose all functions (only flapack --- clapack is an implementation detail)
 empty_module = None
-from scipy.linalg._flapack import *
+from scipy_cupy.linalg._flapack import *
 del empty_module
 
 __all__ = ['get_lapack_funcs']

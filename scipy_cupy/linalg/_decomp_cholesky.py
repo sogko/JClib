@@ -1,6 +1,6 @@
 """Cholesky decomposition functions."""
 
-from numpy import asarray_chkfinite, asarray, atleast_2d
+from cupy import asarray_chkfinite, asarray, atleast_2d
 
 # Local imports
 from ._misc import LinAlgError, _datacopied

@@ -1,12 +1,12 @@
-from numpy.testing import assert_array_almost_equal, assert_array_equal
+from cupy.testing import assert_array_almost_equal, assert_array_equal
 from pytest import raises as assert_raises
 
-from numpy import array, transpose, dot, conjugate, zeros_like, empty
-from numpy.random import random
-from scipy.linalg import cholesky, cholesky_banded, cho_solve_banded, \
+from cupy import array, transpose, dot, conjugate, zeros_like, empty
+from cupy.random import random
+from scipy_cupy.linalg import cholesky, cholesky_banded, cho_solve_banded, \
      cho_factor, cho_solve
 
-from scipy.linalg._testutils import assert_no_overwrite
+from scipy_cupy.linalg._testutils import assert_no_overwrite
 
 
 class TestCholesky:

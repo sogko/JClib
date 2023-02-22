@@ -3,13 +3,13 @@
 #
 from itertools import product
 
-import numpy as np
-from numpy import (Inf, dot, diag, prod, logical_not, ravel, transpose,
+import cupy as np
+from cupy import (Inf, dot, diag, prod, logical_not, ravel, transpose,
                    conjugate, absolute, amax, sign, isfinite)
-from numpy.lib.scimath import sqrt as csqrt
+from numpy.lib.scimath import sqrt as csqrt # sgk no_cupy_equivalent ; potentially slow but we'll see
 
 # Local imports
-from scipy.linalg import LinAlgError, bandwidth
+from scipy_cupy.linalg import LinAlgError, bandwidth
 from ._misc import norm
 from ._basic import solve, inv
 from ._special_matrices import triu

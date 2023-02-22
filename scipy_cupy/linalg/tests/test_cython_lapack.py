@@ -1,6 +1,6 @@
-from numpy.testing import assert_allclose
-from scipy.linalg import cython_lapack as cython_lapack
-from scipy.linalg import lapack
+from cupy.testing import assert_allclose
+from scipy_cupy.linalg import cython_lapack as cython_lapack
+from scipy_cupy.linalg import lapack
 
 
 class TestLamch:
