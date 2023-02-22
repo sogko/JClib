@@ -2,10 +2,10 @@
 """
 import gc
 
-from scipy._lib._gcutils import (set_gc_state, gc_state, assert_deallocated,
+from scipy_cupy._lib._gcutils import (set_gc_state, gc_state, assert_deallocated,
                                  ReferenceError, IS_PYPY)
 
-from numpy.testing import assert_equal
+from cupy.testing import assert_equal
 
 import pytest
 

@@ -6,7 +6,7 @@ Generic test utilities.
 import os
 import re
 import sys
-import numpy as np
+import cupy as np
 import inspect
 
 

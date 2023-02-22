@@ -9,6 +9,6 @@ utilities in submodules of ``_lib`` can be run with::
     _lib.test()
 
 """
-from scipy._lib._testutils import PytestTester
+from scipy_cupy._lib._testutils import PytestTester
 test = PytestTester(__name__)
 del PytestTester

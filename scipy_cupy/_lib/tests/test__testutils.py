@@ -1,5 +1,5 @@
 import sys
-from scipy._lib._testutils import _parse_size, _get_mem_available
+from scipy_cupy._lib._testutils import _parse_size, _get_mem_available
 import pytest
 
 

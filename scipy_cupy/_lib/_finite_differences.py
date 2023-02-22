@@ -1,4 +1,4 @@
-from numpy import arange, newaxis, hstack, prod, array
+from cupy import arange, newaxis, hstack, prod, array
 
 
 def _central_diff_weights(Np, ndiv=1):

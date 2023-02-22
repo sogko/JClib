@@ -5,13 +5,13 @@ import re
 import math
 from fractions import Fraction
 
-import numpy as np
-from numpy.testing import assert_equal, assert_
+import cupy as np
+from cupy.testing import assert_equal, assert_
 import pytest
 from pytest import raises as assert_raises, deprecated_call
 
 import scipy
-from scipy._lib._util import (_aligned_zeros, check_random_state, MapWrapper,
+from scipy_cupy._lib._util import (_aligned_zeros, check_random_state, MapWrapper,
                               getfullargspec_no_self, FullArgSpec,
                               rng_integers, _validate_int, _rename_parameter,
                               _contains_nan)

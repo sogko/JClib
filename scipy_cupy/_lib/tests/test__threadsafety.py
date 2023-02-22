@@ -2,10 +2,10 @@ import threading
 import time
 import traceback
 
-from numpy.testing import assert_
+from cupy.testing import assert_
 from pytest import raises as assert_raises
 
-from scipy._lib._threadsafety import ReentrancyLock, non_reentrant, ReentrancyError
+from scipy_cupy._lib._threadsafety import ReentrancyLock, non_reentrant, ReentrancyError
 
 
 def test_parallel_threads():

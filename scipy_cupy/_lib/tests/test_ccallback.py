@@ -1,13 +1,13 @@
-from numpy.testing import assert_equal, assert_
+from cupy.testing import assert_equal, assert_
 from pytest import raises as assert_raises
 
 import time
 import pytest
 import ctypes
 import threading
-from scipy._lib import _ccallback_c as _test_ccallback_cython
-from scipy._lib import _test_ccallback
-from scipy._lib._ccallback import LowLevelCallable
+from scipy_cupy._lib import _ccallback_c as _test_ccallback_cython
+from scipy_cupy._lib import _test_ccallback
+from scipy_cupy._lib._ccallback import LowLevelCallable
 
 try:
     import cffi

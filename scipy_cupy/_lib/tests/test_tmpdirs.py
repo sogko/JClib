@@ -2,9 +2,9 @@
 from os import getcwd
 from os.path import realpath, abspath, dirname, isfile, join as pjoin, exists
 
-from scipy._lib._tmpdirs import tempdir, in_tempdir, in_dir
+from scipy_cupy._lib._tmpdirs import tempdir, in_tempdir, in_dir
 
-from numpy.testing import assert_, assert_equal
+from cupy.testing import assert_, assert_equal
 
 MY_PATH = abspath(__file__)
 MY_DIR = dirname(MY_PATH)

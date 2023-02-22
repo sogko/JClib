@@ -13,7 +13,7 @@ from typing import (
     TypeVar,
 )
 
-import numpy as np
+import cupy as np
 
 IntNumber = Union[int, np.integer]
 DecimalNumber = Union[float, np.floating, np.integer]
@@ -27,7 +27,7 @@ if TYPE_CHECKING:
                                                          np.random.RandomState])
 
 try:
-    from numpy.random import Generator as Generator
+    from cupy.random import Generator as Generator
 except ImportError:
     class Generator():  # type: ignore[no-redef]
         pass
