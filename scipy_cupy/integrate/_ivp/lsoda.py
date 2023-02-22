@@ -1,5 +1,5 @@
-import numpy as np
-from scipy.integrate import ode
+import cupy as np
+from scipy_cupy.integrate import ode
 from .common import validate_tol, validate_first_step, warn_extraneous
 from .base import OdeSolver, DenseOutput
 

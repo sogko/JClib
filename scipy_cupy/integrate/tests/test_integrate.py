@@ -2,15 +2,15 @@
 """
 Tests for numerical integration.
 """
-import numpy as np
-from numpy import (arange, zeros, array, dot, sqrt, cos, sin, eye, pi, exp,
+import cupy as np
+from cupy import (arange, zeros, array, dot, sqrt, cos, sin, eye, pi, exp,
                    allclose)
 
-from numpy.testing import (
+from cupy.testing import (
     assert_, assert_array_almost_equal,
     assert_allclose, assert_array_equal, assert_equal, assert_warns)
 from pytest import raises as assert_raises
-from scipy.integrate import odeint, ode, complex_ode
+from scipy_cupy.integrate import odeint, ode, complex_ode
 
 #------------------------------------------------------------------------------
 # Test ODE integrators

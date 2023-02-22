@@ -1,14 +1,14 @@
 import pytest
-import numpy as np
-from numpy import cos, sin, pi
-from numpy.testing import (assert_equal, assert_almost_equal, assert_allclose,
+import cupy as np
+from cupy import cos, sin, pi
+from cupy.testing import (assert_equal, assert_almost_equal, assert_allclose,
                            assert_, suppress_warnings)
 
-from scipy.integrate import (quadrature, romberg, romb, newton_cotes,
+from scipy_cupy.integrate import (quadrature, romberg, romb, newton_cotes,
                              cumulative_trapezoid, cumtrapz, trapz, trapezoid,
                              quad, simpson, simps, fixed_quad, AccuracyWarning)
-from scipy.integrate._quadrature import _qmc_quad as qmc_quad
-from scipy import stats, special as sc
+from scipy_cupy.integrate._quadrature import _qmc_quad as qmc_quad
+from scipy_cupy import stats, special as sc
 
 
 class TestFixedQuad:

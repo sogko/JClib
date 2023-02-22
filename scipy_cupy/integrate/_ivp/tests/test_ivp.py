@@ -1,15 +1,15 @@
 from itertools import product
-from numpy.testing import (assert_, assert_allclose,
+from cupy.testing import (assert_, assert_allclose,
                            assert_equal, assert_no_warnings, suppress_warnings)
 import pytest
 from pytest import raises as assert_raises
-import numpy as np
-from scipy.optimize._numdiff import group_columns
-from scipy.integrate import solve_ivp, RK23, RK45, DOP853, Radau, BDF, LSODA
-from scipy.integrate import OdeSolution
-from scipy.integrate._ivp.common import num_jac
-from scipy.integrate._ivp.base import ConstantDenseOutput
-from scipy.sparse import coo_matrix, csc_matrix
+import cupy as np
+from scipy_cupy.optimize._numdiff import group_columns
+from scipy_cupy.integrate import solve_ivp, RK23, RK45, DOP853, Radau, BDF, LSODA
+from scipy_cupy.integrate import OdeSolution
+from scipy_cupy.integrate._ivp.common import num_jac
+from scipy_cupy.integrate._ivp.base import ConstantDenseOutput
+from scipy_cupy.sparse import coo_matrix, csc_matrix
 
 
 def fun_zero(t, y):

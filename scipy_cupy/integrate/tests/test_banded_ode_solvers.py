@@ -1,7 +1,7 @@
 import itertools
-import numpy as np
-from numpy.testing import assert_allclose
-from scipy.integrate import ode
+import cupy as np
+from cupy.testing import assert_allclose
+from scipy_cupy.integrate import ode
 
 
 def _band_count(a):

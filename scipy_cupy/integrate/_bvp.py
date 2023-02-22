@@ -1,12 +1,12 @@
 """Boundary value problem solver."""
 from warnings import warn
 
-import numpy as np
-from numpy.linalg import pinv
+import cupy as np
+from cupy.linalg import pinv
 
-from scipy.sparse import coo_matrix, csc_matrix
-from scipy.sparse.linalg import splu
-from scipy.optimize import OptimizeResult
+from scipy_cupy.sparse import coo_matrix, csc_matrix
+from scipy_cupy.sparse.linalg import splu
+from scipy_cupy.optimize import OptimizeResult
 
 
 EPS = np.finfo(float).eps

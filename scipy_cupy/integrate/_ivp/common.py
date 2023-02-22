@@ -1,7 +1,7 @@
 from itertools import groupby
 from warnings import warn
-import numpy as np
-from scipy.sparse import find, coo_matrix
+import cupy as np
+from scipy_cupy.sparse import find, coo_matrix
 
 
 EPS = np.finfo(float).eps

@@ -5,8 +5,8 @@ import warnings
 from functools import partial
 
 from . import _quadpack
-import numpy as np
-from numpy import Inf
+import cupy as np
+from cupy import Inf
 
 __all__ = ["quad", "dblquad", "tplquad", "nquad", "IntegrationWarning"]
 

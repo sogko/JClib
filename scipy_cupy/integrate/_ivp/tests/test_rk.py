@@ -1,8 +1,8 @@
 import pytest
-from numpy.testing import assert_allclose, assert_
-import numpy as np
-from scipy.integrate import RK23, RK45, DOP853
-from scipy.integrate._ivp import dop853_coefficients
+from cupy.testing import assert_allclose, assert_
+import cupy as np
+from scipy_cupy.integrate import RK23, RK45, DOP853
+from scipy_cupy.integrate._ivp import dop853_coefficients
 
 
 @pytest.mark.parametrize("solver", [RK23, RK45, DOP853])

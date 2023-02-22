@@ -1,7 +1,7 @@
 import os
 from os.path import join
 
-from scipy._build_utils import numpy_nodepr_api
+from scipy_cupy._build_utils import numpy_nodepr_api
 
 
 def configuration(parent_package='',top_path=None):

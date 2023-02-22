@@ -4,9 +4,9 @@ import heapq
 import collections
 import functools
 
-import numpy as np
+import cupy as np
 
-from scipy._lib._util import MapWrapper, _FunctionWrapper
+from scipy_cupy._lib._util import MapWrapper, _FunctionWrapper
 
 
 class LRUDict(collections.OrderedDict):

@@ -2,7 +2,7 @@
 
 __all__ = ['odeint']
 
-import numpy as np
+import cupy as np
 from . import _odepack
 from copy import copy
 import warnings

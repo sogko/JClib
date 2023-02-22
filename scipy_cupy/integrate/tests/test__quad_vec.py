@@ -1,9 +1,9 @@
 import pytest
 
-import numpy as np
-from numpy.testing import assert_allclose
+import cupy as np
+from cupy.testing import assert_allclose
 
-from scipy.integrate import quad_vec
+from scipy_cupy.integrate import quad_vec
 
 from multiprocessing.dummy import Pool
 

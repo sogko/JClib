@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING, Callable, Dict, Tuple, Any, cast
 import functools
-import numpy as np
+import cupy as np
 import math
 import types
 import warnings
@@ -10,10 +10,10 @@ from collections import namedtuple
 
 # trapezoid is a public function for scipy.integrate,
 # even though it's actually a NumPy function.
-from numpy import trapz as trapezoid
-from scipy.special import roots_legendre
-from scipy.special import gammaln, logsumexp
-from scipy._lib._util import _rng_spawn
+from cupy import trapz as trapezoid
+from scipy_cupy.special import roots_legendre
+from scipy_cupy.special import gammaln, logsumexp
+from scipy_cupy._lib._util import _rng_spawn
 
 
 __all__ = ['fixed_quad', 'quadrature', 'romberg', 'romb',

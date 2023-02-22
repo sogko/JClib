@@ -83,7 +83,7 @@ __all__ = ['ode', 'complex_ode']
 import re
 import warnings
 
-from numpy import asarray, array, zeros, isscalar, real, imag, vstack
+from cupy import asarray, array, zeros, isscalar, real, imag, vstack
 
 from . import _vode
 from . import _dop
