@@ -6,7 +6,7 @@
 
 """
 
-import numpy as np
+import cupy as np
 
 from ._base import spmatrix, _ufuncs_with_fixed_point_at_zero
 from ._sputils import isscalarlike, validateaxis, matrix

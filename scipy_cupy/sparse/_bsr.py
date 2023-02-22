@@ -6,7 +6,7 @@ __all__ = ['bsr_matrix', 'isspmatrix_bsr']
 
 from warnings import warn
 
-import numpy as np
+import cupy as np
 
 from ._data import _data_matrix, _minmax_mixin
 from ._compressed import _cs_matrix

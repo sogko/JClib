@@ -7,7 +7,7 @@ __all__ = ['lil_matrix', 'isspmatrix_lil']
 
 from bisect import bisect_left
 
-import numpy as np
+import cupy as np
 
 from ._base import spmatrix, isspmatrix
 from ._index import IndexMixin, INT_TYPES, _broadcast_arrays

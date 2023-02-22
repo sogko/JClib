@@ -1,8 +1,8 @@
 """Sparse block 1-norm estimator.
 """
 
-import numpy as np
-from scipy.sparse.linalg import aslinearoperator
+import cupy as np
+from scipy_cupy.sparse.linalg import aslinearoperator
 
 
 __all__ = ['onenormest']

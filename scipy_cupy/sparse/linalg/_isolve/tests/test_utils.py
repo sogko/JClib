@@ -1,7 +1,7 @@
-import numpy as np
+import cupy as np
 from pytest import raises as assert_raises
 
-import scipy.sparse.linalg._isolve.utils as utils
+import scipy_cupy.sparse.linalg._isolve.utils as utils
 
 
 def test_make_system_bad_shape():

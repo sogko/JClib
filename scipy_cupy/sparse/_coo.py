@@ -6,7 +6,7 @@ __all__ = ['coo_matrix', 'isspmatrix_coo']
 
 from warnings import warn
 
-import numpy as np
+import cupy as np
 
 
 from ._sparsetools import coo_tocsr, coo_todense, coo_matvec

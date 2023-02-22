@@ -1,11 +1,11 @@
 import os
-import numpy as np
+import cupy as np
 import tempfile
 
 from pytest import raises as assert_raises
-from numpy.testing import assert_equal, assert_
+from cupy.testing import assert_equal, assert_
 
-from scipy.sparse import (csc_matrix, csr_matrix, bsr_matrix, dia_matrix,
+from scipy_cupy.sparse import (csc_matrix, csr_matrix, bsr_matrix, dia_matrix,
                           coo_matrix, save_npz, load_npz, dok_matrix)
 
 

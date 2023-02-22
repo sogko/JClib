@@ -1,6 +1,6 @@
-import numpy as np
-from numpy.testing import assert_array_almost_equal
-from scipy.sparse.csgraph import (breadth_first_tree, depth_first_tree,
+import cupy as np
+from cupy.testing import assert_array_almost_equal
+from scipy_cupy.sparse.csgraph import (breadth_first_tree, depth_first_tree,
     csgraph_to_dense, csgraph_from_dense)
 
 

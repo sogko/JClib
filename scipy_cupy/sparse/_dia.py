@@ -4,7 +4,7 @@ __docformat__ = "restructuredtext en"
 
 __all__ = ['dia_matrix', 'isspmatrix_dia']
 
-import numpy as np
+import cupy as np
 
 from ._base import isspmatrix, _formats, spmatrix
 from ._data import _data_matrix

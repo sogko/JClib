@@ -5,7 +5,7 @@ __docformat__ = "restructuredtext en"
 __all__ = ['dok_matrix', 'isspmatrix_dok']
 
 import itertools
-import numpy as np
+import cupy as np
 
 from ._base import spmatrix, isspmatrix
 from ._index import IndexMixin

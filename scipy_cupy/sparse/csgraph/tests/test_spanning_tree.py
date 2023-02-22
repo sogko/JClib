@@ -1,9 +1,9 @@
 """Test the minimum spanning tree function"""
-import numpy as np
-from numpy.testing import assert_
-import numpy.testing as npt
-from scipy.sparse import csr_matrix
-from scipy.sparse.csgraph import minimum_spanning_tree
+import cupy as np
+from cupy.testing import assert_
+import cupy.testing as npt
+from scipy_cupy.sparse import csr_matrix
+from scipy_cupy.sparse.csgraph import minimum_spanning_tree
 
 
 def test_minimum_spanning_tree():

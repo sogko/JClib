@@ -1,11 +1,11 @@
 from warnings import warn
 
-import numpy as np
-from numpy import asarray
-from scipy.sparse import (isspmatrix_csc, isspmatrix_csr, isspmatrix,
+import cupy as np
+from cupy import asarray
+from scipy_cupy.sparse import (isspmatrix_csc, isspmatrix_csr, isspmatrix,
                           SparseEfficiencyWarning, csc_matrix, csr_matrix)
-from scipy.sparse._sputils import is_pydata_spmatrix
-from scipy.linalg import LinAlgError
+from scipy_cupy.sparse._sputils import is_pydata_spmatrix
+from scipy_cupy.linalg import LinAlgError
 import copy
 
 from . import _superlu

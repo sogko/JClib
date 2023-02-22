@@ -10,16 +10,16 @@ Sparse matrix functions
 
 __all__ = ['expm', 'inv']
 
-import numpy as np
-from scipy.linalg._basic import solve, solve_triangular
+import cupy as np
+from scipy_cupy.linalg._basic import solve, solve_triangular
 
-from scipy.sparse._base import isspmatrix
-from scipy.sparse.linalg import spsolve
-from scipy.sparse._sputils import is_pydata_spmatrix
+from scipy_cupy.sparse._base import isspmatrix
+from scipy_cupy.sparse.linalg import spsolve
+from scipy_cupy.sparse._sputils import is_pydata_spmatrix
 
-import scipy.sparse
-import scipy.sparse.linalg
-from scipy.sparse.linalg._interface import LinearOperator
+import scipy_cupy.sparse
+import scipy_cupy.sparse.linalg
+from scipy_cupy.sparse.linalg._interface import LinearOperator
 
 from ._expm_multiply import _ident_like, _exact_1_norm as _onenorm
 

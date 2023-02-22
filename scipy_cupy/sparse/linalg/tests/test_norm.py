@@ -2,13 +2,13 @@
 """
 
 import pytest
-import numpy as np
-from numpy.linalg import norm as npnorm
-from numpy.testing import assert_allclose, assert_equal
+import cupy as np
+from cupy.linalg import norm as npnorm
+from cupy.testing import assert_allclose, assert_equal
 from pytest import raises as assert_raises
 
-import scipy.sparse
-from scipy.sparse.linalg import norm as spnorm
+import scipy_cupy.sparse
+from scipy_cupy.sparse.linalg import norm as spnorm
 
 
 # https://github.com/scipy/scipy/issues/16031

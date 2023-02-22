@@ -1,5 +1,5 @@
-from numpy import inner, zeros, inf, finfo
-from numpy.linalg import norm
+from cupy import inner, zeros, inf, finfo
+from cupy.linalg import norm
 from math import sqrt
 
 from .utils import make_system

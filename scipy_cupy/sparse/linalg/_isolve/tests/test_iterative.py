@@ -4,19 +4,19 @@
 import itertools
 import platform
 import sys
-import numpy as np
+import cupy as np
 
-from numpy.testing import (assert_equal, assert_array_equal,
+from cupy.testing import (assert_equal, assert_array_equal,
      assert_, assert_allclose, suppress_warnings)
 import pytest
 from pytest import raises as assert_raises
 
-from numpy import zeros, arange, array, ones, eye, iscomplexobj
-from scipy.linalg import norm
-from scipy.sparse import spdiags, csr_matrix, SparseEfficiencyWarning, kronsum
+from cupy import zeros, arange, array, ones, eye, iscomplexobj
+from scipy_cupy.linalg import norm
+from scipy_cupy.sparse import spdiags, csr_matrix, SparseEfficiencyWarning, kronsum
 
-from scipy.sparse.linalg import LinearOperator, aslinearoperator
-from scipy.sparse.linalg._isolve import cg, cgs, bicg, bicgstab, gmres, qmr, minres, lgmres, gcrotmk, tfqmr
+from scipy_cupy.sparse.linalg import LinearOperator, aslinearoperator
+from scipy_cupy.sparse.linalg._isolve import cg, cgs, bicg, bicgstab, gmres, qmr, minres, lgmres, gcrotmk, tfqmr
 
 # TODO check that method preserve shape and type
 # TODO test both preconditioner methods

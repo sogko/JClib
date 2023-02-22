@@ -1,10 +1,10 @@
 import pytest
-import numpy as np
-from numpy.testing import assert_allclose
+import cupy as np
+from cupy.testing import assert_allclose
 from pytest import raises as assert_raises
-from scipy import sparse
+from scipy_cupy import sparse
 
-from scipy.sparse import csgraph
+from scipy_cupy.sparse import csgraph
 
 
 def check_int_type(mat):

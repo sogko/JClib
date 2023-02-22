@@ -1,18 +1,18 @@
 import os
-import numpy as np
+import cupy as np
 
 from .arpack import _arpack  # type: ignore[attr-defined]
 from . import eigsh
 
-from scipy._lib._util import check_random_state
-from scipy.sparse.linalg._interface import LinearOperator, aslinearoperator
-from scipy.sparse.linalg._eigen.lobpcg import lobpcg  # type: ignore[no-redef]
+from scipy_cupy._lib._util import check_random_state
+from scipy_cupy.sparse.linalg._interface import LinearOperator, aslinearoperator
+from scipy_cupy.sparse.linalg._eigen.lobpcg import lobpcg  # type: ignore[no-redef]
 if os.environ.get("SCIPY_USE_PROPACK"):
     from scipy.sparse.linalg._svdp import _svdp
     HAS_PROPACK = True
 else:
     HAS_PROPACK = False
-from scipy.linalg import svd
+from scipy_cupy.linalg import svd
 
 arpack_int = _arpack.timing.nbx.dtype
 __all__ = ['svds']

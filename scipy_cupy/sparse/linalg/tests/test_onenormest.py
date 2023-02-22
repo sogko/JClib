@@ -1,12 +1,12 @@
 """Test functions for the sparse.linalg._onenormest module
 """
 
-import numpy as np
-from numpy.testing import assert_allclose, assert_equal, assert_
+import cupy as np
+from cupy.testing import assert_allclose, assert_equal, assert_
 import pytest
-import scipy.linalg
-import scipy.sparse.linalg
-from scipy.sparse.linalg._onenormest import _onenormest_core, _algorithm_2_2
+import scipy_cupy.linalg
+import scipy_cupy.sparse.linalg
+from scipy_cupy.sparse.linalg._onenormest import _onenormest_core, _algorithm_2_2
 
 
 class MatrixProductOperator(scipy.sparse.linalg.LinearOperator):

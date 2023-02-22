@@ -3,9 +3,9 @@
 
 import sys
 import operator
-import numpy as np
-from scipy._lib._util import prod
-import scipy.sparse as sp
+import cupy as np
+from scipy_cupy._lib._util import prod
+import scipy_cupy.sparse as sp
 
 
 __all__ = ['upcast', 'getdtype', 'getdata', 'isscalarlike', 'isintlike',
@@ -14,7 +14,8 @@ __all__ = ['upcast', 'getdtype', 'getdata', 'isscalarlike', 'isintlike',
 supported_dtypes = [np.bool_, np.byte, np.ubyte, np.short, np.ushort, np.intc,
                     np.uintc, np.int_, np.uint, np.longlong, np.ulonglong,
                     np.single, np.double,
-                    np.longdouble, np.csingle, np.cdouble, np.clongdouble]
+                    # np.longdouble, np.csingle, np.cdouble, np.clongdouble]
+                    np.longfloat, np.csingle, np.cdouble, np.complexfloating]
 
 _upcast_memo = {}
 

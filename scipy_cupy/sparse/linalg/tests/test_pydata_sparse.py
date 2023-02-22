@@ -1,10 +1,10 @@
 import pytest
 
-import numpy as np
-import scipy.sparse as sp
-import scipy.sparse.linalg as splin
+import cupy as np
+import scipy_cupy.sparse as sp
+import scipy_cupy.sparse.linalg as splin
 
-from numpy.testing import assert_allclose, assert_equal
+from cupy.testing import assert_allclose, assert_equal
 
 try:
     import sparse

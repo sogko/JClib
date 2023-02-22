@@ -1,7 +1,7 @@
-import numpy as np
-from numpy.testing import assert_array_almost_equal
-from scipy.sparse import csr_matrix
-from scipy.sparse.csgraph import csgraph_from_dense, csgraph_to_dense
+import cupy as np
+from cupy.testing import assert_array_almost_equal
+from scipy_cupy.sparse import csr_matrix
+from scipy_cupy.sparse.csgraph import csgraph_from_dense, csgraph_to_dense
 
 
 def test_csgraph_from_dense():

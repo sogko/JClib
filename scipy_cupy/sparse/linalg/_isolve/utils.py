@@ -3,9 +3,9 @@ __docformat__ = "restructuredtext en"
 __all__ = []
 
 
-from numpy import asanyarray, asarray, array, zeros
+from cupy import asanyarray, asarray, array, zeros
 
-from scipy.sparse.linalg._interface import aslinearoperator, LinearOperator, \
+from scipy_cupy.sparse.linalg._interface import aslinearoperator, LinearOperator, \
      IdentityOperator
 
 _coerce_rules = {('f','f'):'f', ('f','d'):'d', ('f','F'):'F',

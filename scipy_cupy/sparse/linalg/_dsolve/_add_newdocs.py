@@ -1,4 +1,4 @@
-from numpy.lib import add_newdoc
+from numpy.lib import add_newdoc # sgk no_cupy_equivalent
 
 add_newdoc('scipy.sparse.linalg._dsolve._superlu', 'SuperLU',
     """

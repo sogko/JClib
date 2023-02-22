@@ -1,11 +1,11 @@
 import warnings
-import numpy as np
-from numpy.testing import assert_array_almost_equal, assert_array_equal
+import cupy as np
+from cupy.testing import assert_array_almost_equal, assert_array_equal
 from pytest import raises as assert_raises
-from scipy.sparse.csgraph import (shortest_path, dijkstra, johnson,
+from scipy_cupy.sparse.csgraph import (shortest_path, dijkstra, johnson,
                                   bellman_ford, construct_dist_matrix,
                                   NegativeCycleError)
-import scipy.sparse
+import scipy_cupy.sparse
 import pytest
 
 directed_G = np.array([[0, 3, 3, 0, 0],

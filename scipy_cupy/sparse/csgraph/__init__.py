@@ -203,6 +203,6 @@ from ._tools import (
     csgraph_to_masked
 )
 
-from scipy._lib._testutils import PytestTester
+from scipy_cupy._lib._testutils import PytestTester
 test = PytestTester(__name__)
 del PytestTester

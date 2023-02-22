@@ -1,6 +1,6 @@
-import numpy as np
-from numpy.testing import assert_array_almost_equal, assert_
-from scipy.sparse import csr_matrix, hstack
+import cupy as np
+from cupy.testing import assert_array_almost_equal, assert_
+from scipy_cupy.sparse import csr_matrix, hstack
 import pytest
 
 

@@ -1,20 +1,20 @@
 import os
 import re
 import copy
-import numpy as np
+import cupy as np
 
-from numpy.testing import assert_allclose, assert_equal, assert_array_equal
+from cupy.testing import assert_allclose, assert_equal, assert_array_equal
 import pytest
 
-from scipy.linalg import svd, null_space
-from scipy.sparse import csc_matrix, isspmatrix, spdiags, random
-from scipy.sparse.linalg import LinearOperator, aslinearoperator
+from scipy_cupy.linalg import svd, null_space
+from scipy_cupy.sparse import csc_matrix, isspmatrix, spdiags, random
+from scipy_cupy.sparse.linalg import LinearOperator, aslinearoperator
 if os.environ.get("SCIPY_USE_PROPACK"):
     has_propack = True
 else:
     has_propack = False
-from scipy.sparse.linalg import svds
-from scipy.sparse.linalg._eigen.arpack import ArpackNoConvergence
+from scipy_cupy.sparse.linalg import svds
+from scipy_cupy.sparse.linalg._eigen.arpack import ArpackNoConvergence
 
 
 # --- Helper Functions / Classes ---

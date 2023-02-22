@@ -4,14 +4,14 @@ __all__ = ['bicg','bicgstab','cg','cgs','gmres','qmr']
 
 import warnings
 from textwrap import dedent
-import numpy as np
+import cupy as np
 
 from . import _iterative
 
-from scipy.sparse.linalg._interface import LinearOperator
+from scipy_cupy.sparse.linalg._interface import LinearOperator
 from .utils import make_system
-from scipy._lib._util import _aligned_zeros
-from scipy._lib._threadsafety import non_reentrant
+from scipy_cupy._lib._util import _aligned_zeros
+from scipy_cupy._lib._threadsafety import non_reentrant
 
 _type_conv = {'f':'s', 'd':'d', 'F':'c', 'D':'z'}
 

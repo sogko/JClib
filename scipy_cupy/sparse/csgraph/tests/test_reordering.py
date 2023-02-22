@@ -1,7 +1,7 @@
-import numpy as np
-from numpy.testing import assert_equal
-from scipy.sparse.csgraph import reverse_cuthill_mckee, structural_rank
-from scipy.sparse import csc_matrix, csr_matrix, coo_matrix
+import cupy as np
+from cupy.testing import assert_equal
+from scipy_cupy.sparse.csgraph import reverse_cuthill_mckee, structural_rank
+from scipy_cupy.sparse import csc_matrix, csr_matrix, coo_matrix
 
 
 def test_graph_reverse_cuthill_mckee():

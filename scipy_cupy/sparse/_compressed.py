@@ -4,8 +4,8 @@ __all__ = []
 from warnings import warn
 import operator
 
-import numpy as np
-from scipy._lib._util import _prune_array
+import cupy as np
+from scipy_cupy._lib._util import _prune_array
 
 from ._base import spmatrix, isspmatrix, SparseEfficiencyWarning
 from ._data import _data_matrix, _minmax_mixin

@@ -6,23 +6,23 @@
 """
 import math
 
-import numpy as np
-from numpy import array, eye, exp, random
-from numpy.linalg import matrix_power
-from numpy.testing import (
+import cupy as np
+from cupy import array, eye, exp, random
+from cupy.linalg import matrix_power
+from cupy.testing import (
         assert_allclose, assert_, assert_array_almost_equal, assert_equal,
         assert_array_almost_equal_nulp, suppress_warnings)
 
-from scipy.sparse import csc_matrix, SparseEfficiencyWarning
-from scipy.sparse._construct import eye as speye
-from scipy.sparse.linalg._matfuncs import (expm, _expm,
+from scipy_cupy.sparse import csc_matrix, SparseEfficiencyWarning
+from scipy_cupy.sparse._construct import eye as speye
+from scipy_cupy.sparse.linalg._matfuncs import (expm, _expm,
         ProductOperator, MatrixPowerOperator,
         _onenorm_matrix_power_nnm)
-from scipy.sparse._sputils import matrix
-from scipy.linalg import logm
-from scipy.special import factorial, binom
-import scipy.sparse
-import scipy.sparse.linalg
+from scipy_cupy.sparse._sputils import matrix
+from scipy_cupy.linalg import logm
+from scipy_cupy.special import factorial, binom
+import scipy_cupy.sparse
+import scipy_cupy.sparse.linalg
 
 
 def _burkardt_13_power(n, p):

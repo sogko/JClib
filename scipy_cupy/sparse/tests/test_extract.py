@@ -1,10 +1,10 @@
 """test sparse matrix construction functions"""
 
-from numpy.testing import assert_equal
-from scipy.sparse import csr_matrix
+from cupy.testing import assert_equal
+from scipy_cupy.sparse import csr_matrix
 
-import numpy as np
-from scipy.sparse import _extract
+import cupy as np
+from scipy_cupy.sparse import _extract
 
 
 class TestExtract:

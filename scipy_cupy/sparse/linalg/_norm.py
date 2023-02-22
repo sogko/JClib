@@ -1,12 +1,12 @@
 """Sparse matrix norms.
 
 """
-import numpy as np
-from scipy.sparse import issparse
-from scipy.sparse.linalg import svds
-import scipy.sparse as sp
+import cupy as np
+from scipy_cupy.sparse import issparse
+from scipy_cupy.sparse.linalg import svds
+import scipy_cupy.sparse as sp
 
-from numpy import Inf, sqrt, abs
+from cupy import Inf, sqrt, abs
 
 __all__ = ['norm']
 

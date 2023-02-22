@@ -8,9 +8,9 @@ __all__ = ['spdiags', 'eye', 'identity', 'kron', 'kronsum',
 
 import numbers
 from functools import partial
-import numpy as np
+import cupy as np
 
-from scipy._lib._util import check_random_state, rng_integers
+from scipy_cupy._lib._util import check_random_state, rng_integers
 from ._sputils import upcast, get_index_dtype, isscalarlike
 
 from ._sparsetools import csr_hstack

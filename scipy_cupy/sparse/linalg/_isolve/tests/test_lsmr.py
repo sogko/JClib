@@ -16,13 +16,13 @@ Dept of MS&E, Stanford University.
 
 """
 
-from numpy import array, arange, eye, zeros, ones, sqrt, transpose, hstack
-from numpy.linalg import norm
-from numpy.testing import assert_allclose
+from cupy import array, arange, eye, zeros, ones, sqrt, transpose, hstack
+from cupy.linalg import norm
+from cupy.testing import assert_allclose
 import pytest
-from scipy.sparse import coo_matrix
-from scipy.sparse.linalg._interface import aslinearoperator
-from scipy.sparse.linalg import lsmr
+from scipy_cupy.sparse import coo_matrix
+from scipy_cupy.sparse.linalg._interface import aslinearoperator
+from scipy_cupy.sparse.linalg import lsmr
 from .test_lsqr import G, b
 
 

@@ -1,18 +1,18 @@
 """test sparse matrix construction functions"""
 
-import numpy as np
-from numpy import array
-from numpy.testing import (assert_equal, assert_,
+import cupy as np
+from cupy import array
+from cupy.testing import (assert_equal, assert_,
         assert_array_equal, assert_array_almost_equal_nulp)
 import pytest
 from pytest import raises as assert_raises
-from scipy._lib._testutils import check_free_memory
-from scipy._lib._util import check_random_state
+from scipy_cupy._lib._testutils import check_free_memory
+from scipy_cupy._lib._util import check_random_state
 
-from scipy.sparse import (csr_matrix, coo_matrix,
+from scipy_cupy.sparse import (csr_matrix, coo_matrix,
                           _construct as construct)
-from scipy.sparse._construct import rand as sprand
-from scipy.sparse._sputils import matrix
+from scipy_cupy.sparse._construct import rand as sprand
+from scipy_cupy.sparse._sputils import matrix
 
 sparse_formats = ['csr','csc','coo','bsr','dia','lil','dok']
 

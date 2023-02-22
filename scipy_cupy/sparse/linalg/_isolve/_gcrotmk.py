@@ -2,10 +2,10 @@
 # Distributed under the same license as SciPy.
 
 import warnings
-import numpy as np
-from numpy.linalg import LinAlgError
-from scipy.linalg import (get_blas_funcs, qr, solve, svd, qr_insert, lstsq)
-from scipy.sparse.linalg._isolve.utils import make_system
+import cupy as np
+from cupy.linalg import LinAlgError
+from scipy_cupy.linalg import (get_blas_funcs, qr, solve, svd, qr_insert, lstsq)
+from scipy_cupy.sparse.linalg._isolve.utils import make_system
 
 
 __all__ = ['gcrotmk']

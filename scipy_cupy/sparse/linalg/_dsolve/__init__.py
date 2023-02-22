@@ -66,6 +66,6 @@ __all__ = [
     'spsolve_triangular', 'use_solver'
 ]
 
-from scipy._lib._testutils import PytestTester
+from scipy_cupy._lib._testutils import PytestTester
 test = PytestTester(__name__)
 del PytestTester

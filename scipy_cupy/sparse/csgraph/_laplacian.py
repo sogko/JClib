@@ -2,9 +2,9 @@
 Laplacian of a compressed-sparse graph
 """
 
-import numpy as np
-from scipy.sparse import isspmatrix
-from scipy.sparse.linalg import LinearOperator
+import cupy as np
+from scipy_cupy.sparse import isspmatrix
+from scipy_cupy.sparse.linalg import LinearOperator
 
 
 ###############################################################################

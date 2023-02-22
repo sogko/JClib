@@ -1,11 +1,11 @@
 from itertools import product
 
-import numpy as np
-from numpy.testing import assert_array_equal, assert_equal
+import cupy as np
+from cupy.testing import assert_array_equal, assert_equal
 import pytest
 
-from scipy.sparse import csr_matrix, coo_matrix, diags
-from scipy.sparse.csgraph import (
+from scipy_cupy.sparse import csr_matrix, coo_matrix, diags
+from scipy_cupy.sparse.csgraph import (
     maximum_bipartite_matching, min_weight_full_bipartite_matching
 )
 

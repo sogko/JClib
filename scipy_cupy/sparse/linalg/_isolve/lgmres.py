@@ -2,9 +2,9 @@
 # Distributed under the same license as SciPy.
 
 import warnings
-import numpy as np
-from numpy.linalg import LinAlgError
-from scipy.linalg import get_blas_funcs
+import cupy as np
+from cupy.linalg import LinAlgError
+from scipy_cupy.linalg import get_blas_funcs
 from .utils import make_system
 
 from ._gcrotmk import _fgmres

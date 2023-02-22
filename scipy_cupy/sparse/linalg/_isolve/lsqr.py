@@ -51,9 +51,9 @@ Adapted for SciPy by Stefan van der Walt.
 
 __all__ = ['lsqr']
 
-import numpy as np
+import cupy as np
 from math import sqrt
-from scipy.sparse.linalg._interface import aslinearoperator
+from scipy_cupy.sparse.linalg._interface import aslinearoperator
 
 eps = np.finfo(np.float64).eps
 

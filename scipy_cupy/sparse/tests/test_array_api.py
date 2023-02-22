@@ -1,8 +1,8 @@
 import pytest
-import numpy as np
-import numpy.testing as npt
-import scipy.sparse
-import scipy.sparse.linalg as spla
+import cupy as np
+import cupy.testing as npt
+import scipy_cupy.sparse
+import scipy_cupy.sparse.linalg as spla
 
 sparray_types = ('bsr', 'coo', 'csc', 'csr', 'dia', 'dok', 'lil')
 

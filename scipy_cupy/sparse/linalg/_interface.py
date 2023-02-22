@@ -42,10 +42,10 @@ Several algorithms in the ``scipy.sparse`` library are able to operate on
 
 import warnings
 
-import numpy as np
+import cupy as np
 
-from scipy.sparse import isspmatrix
-from scipy.sparse._sputils import isshape, isintlike, asmatrix, is_pydata_spmatrix
+from scipy_cupy.sparse import isspmatrix
+from scipy_cupy.sparse._sputils import isshape, isintlike, asmatrix, is_pydata_spmatrix
 
 __all__ = ['LinearOperator', 'aslinearoperator']
 

@@ -1,9 +1,9 @@
-import numpy as np
-from numpy.testing import assert_allclose, assert_array_equal, assert_equal
+import cupy as np
+from cupy.testing import assert_allclose, assert_array_equal, assert_equal
 import pytest
-import scipy.sparse
-import scipy.sparse.linalg
-from scipy.sparse.linalg import lsqr
+import scipy_cupy.sparse
+import scipy_cupy.sparse.linalg
+from scipy_cupy.sparse.linalg import lsqr
 from time import time
 
 # Set up a test problem

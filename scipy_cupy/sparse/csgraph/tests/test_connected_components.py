@@ -1,6 +1,6 @@
-import numpy as np
-from numpy.testing import assert_equal, assert_array_almost_equal
-from scipy.sparse import csgraph
+import cupy as np
+from cupy.testing import assert_equal, assert_array_almost_equal
+from scipy_cupy.sparse import csgraph
 
 
 def test_weak_connections():

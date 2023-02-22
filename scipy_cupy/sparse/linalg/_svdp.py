@@ -15,11 +15,11 @@ PROPACK source is BSD licensed, and available at
 
 __all__ = ['_svdp']
 
-import numpy as np
+import cupy as np
 
-from scipy._lib._util import check_random_state
-from scipy.sparse.linalg import aslinearoperator
-from scipy.linalg import LinAlgError
+from scipy_cupy._lib._util import check_random_state
+from scipy_cupy.sparse.linalg import aslinearoperator
+from scipy_cupy.linalg import LinAlgError
 
 from ._propack import _spropack  # type: ignore
 from ._propack import _dpropack

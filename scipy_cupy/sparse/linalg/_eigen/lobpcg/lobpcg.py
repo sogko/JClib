@@ -18,12 +18,12 @@ References
 """
 
 import warnings
-import numpy as np
-from scipy.linalg import (inv, eigh, cho_factor, cho_solve,
+import cupy as np
+from scipy_cupy.linalg import (inv, eigh, cho_factor, cho_solve,
                           cholesky, LinAlgError)
-from scipy.sparse.linalg import LinearOperator
-from scipy.sparse import isspmatrix
-from numpy import block as bmat
+from scipy_cupy.sparse.linalg import LinearOperator
+from scipy_cupy.sparse import isspmatrix
+from numpy import block as bmat # sgk no_cupy_equivalent
 
 __all__ = ["lobpcg"]
 

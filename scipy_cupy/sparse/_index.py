@@ -1,6 +1,6 @@
 """Indexing mixin for sparse matrix classes.
 """
-import numpy as np
+import cupy as np
 from ._sputils import isintlike
 
 try:

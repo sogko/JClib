@@ -5,15 +5,15 @@ import itertools
 import platform
 import sys
 import pytest
-import numpy as np
-from numpy import ones, r_, diag
-from numpy.testing import (assert_almost_equal, assert_equal,
+import cupy as np
+from cupy import ones, r_, diag
+from cupy.testing import (assert_almost_equal, assert_equal,
                            assert_allclose, assert_array_less)
 
-from scipy.linalg import eig, eigh, toeplitz, orth
-from scipy.sparse import spdiags, diags, eye, csr_matrix
-from scipy.sparse.linalg import eigs, LinearOperator
-from scipy.sparse.linalg._eigen.lobpcg import lobpcg
+from scipy_cupy.linalg import eig, eigh, toeplitz, orth
+from scipy_cupy.sparse import spdiags, diags, eye, csr_matrix
+from scipy_cupy.sparse.linalg import eigs, LinearOperator
+from scipy_cupy.sparse.linalg._eigen.lobpcg import lobpcg
 
 _IS_32BIT = (sys.maxsize < 2**32)
 

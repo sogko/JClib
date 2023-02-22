@@ -18,12 +18,12 @@ Dept of MS&E, Stanford University.
 
 __all__ = ['lsmr']
 
-from numpy import zeros, infty, atleast_1d, result_type
-from numpy.linalg import norm
+from cupy import zeros, infty, atleast_1d, result_type
+from cupy.linalg import norm
 from math import sqrt
-from scipy.sparse.linalg._interface import aslinearoperator
+from scipy_cupy.sparse.linalg._interface import aslinearoperator
 
-from scipy.sparse.linalg._isolve.lsqr import _sym_ortho
+from scipy_cupy.sparse.linalg._isolve.lsqr import _sym_ortho
 
 
 def lsmr(A, b, damp=0.0, atol=1e-6, btol=1e-6, conlim=1e8,

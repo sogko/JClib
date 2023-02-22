@@ -15,30 +15,30 @@ import operator
 import platform
 import itertools
 import sys
-from scipy._lib import _pep440
+from scipy_cupy._lib import _pep440
 
-import numpy as np
-from numpy import (arange, zeros, array, dot, asarray,
+import cupy as np
+from cupy import (arange, zeros, array, dot, asarray,
                    vstack, ndarray, transpose, diag, kron, inf, conjugate,
                    int8, ComplexWarning)
 
 import random
-from numpy.testing import (assert_equal, assert_array_equal,
+from cupy.testing import (assert_equal, assert_array_equal,
         assert_array_almost_equal, assert_almost_equal, assert_,
         assert_allclose,suppress_warnings)
 from pytest import raises as assert_raises
 
-import scipy.linalg
+import scipy_cupy.linalg
 
-import scipy.sparse as sparse
-from scipy.sparse import (csc_matrix, csr_matrix, dok_matrix,
+import scipy_cupy.sparse as sparse
+from scipy_cupy.sparse import (csc_matrix, csr_matrix, dok_matrix,
         coo_matrix, lil_matrix, dia_matrix, bsr_matrix,
         eye, isspmatrix, SparseEfficiencyWarning)
-from scipy.sparse._sputils import (supported_dtypes, isscalarlike,
+from scipy_cupy.sparse._sputils import (supported_dtypes, isscalarlike,
                                    get_index_dtype, asmatrix, matrix)
-from scipy.sparse.linalg import splu, expm, inv
+from scipy_cupy.sparse.linalg import splu, expm, inv
 
-from scipy._lib.decorator import decorator
+from scipy_cupy._lib.decorator import decorator
 
 import pytest
 

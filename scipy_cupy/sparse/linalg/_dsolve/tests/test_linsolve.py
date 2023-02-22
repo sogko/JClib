@@ -1,26 +1,26 @@
 import sys
 import threading
 
-import numpy as np
-from numpy import array, finfo, arange, eye, all, unique, ones, dot
-import numpy.random as random
-from numpy.testing import (
+import cupy as np
+from cupy import array, finfo, arange, eye, all, unique, ones, dot
+import cupy.random as random
+from cupy.testing import (
         assert_array_almost_equal, assert_almost_equal,
         assert_equal, assert_array_equal, assert_, assert_allclose,
         assert_warns, suppress_warnings)
 import pytest
 from pytest import raises as assert_raises
 
-import scipy.linalg
-from scipy.linalg import norm, inv
-from scipy.sparse import (spdiags, SparseEfficiencyWarning, csc_matrix,
+import scipy_cupy.linalg
+from scipy_cupy.linalg import norm, inv
+from scipy_cupy.sparse import (spdiags, SparseEfficiencyWarning, csc_matrix,
         csr_matrix, identity, isspmatrix, dok_matrix, lil_matrix, bsr_matrix)
-from scipy.sparse.linalg import SuperLU
-from scipy.sparse.linalg._dsolve import (spsolve, use_solver, splu, spilu,
+from scipy_cupy.sparse.linalg import SuperLU
+from scipy_cupy.sparse.linalg._dsolve import (spsolve, use_solver, splu, spilu,
         MatrixRankWarning, _superlu, spsolve_triangular, factorized)
-import scipy.sparse
+import scipy_cupy.sparse
 
-from scipy._lib._testutils import check_free_memory
+from scipy_cupy._lib._testutils import check_free_memory
 
 
 sup_sparse_efficiency = suppress_warnings()

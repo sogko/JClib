@@ -1,15 +1,15 @@
 """Compute the action of the matrix exponential."""
 from warnings import warn
 
-import numpy as np
+import cupy as np
 
-import scipy.linalg
-import scipy.sparse.linalg
-from scipy.linalg._decomp_qr import qr
-from scipy.sparse._sputils import is_pydata_spmatrix
-from scipy.sparse.linalg import aslinearoperator
-from scipy.sparse.linalg._interface import IdentityOperator
-from scipy.sparse.linalg._onenormest import onenormest
+import scipy_cupy.linalg
+import scipy_cupy.sparse.linalg
+from scipy_cupy.linalg._decomp_qr import qr
+from scipy_cupy.sparse._sputils import is_pydata_spmatrix
+from scipy_cupy.sparse.linalg import aslinearoperator
+from scipy_cupy.sparse.linalg._interface import IdentityOperator
+from scipy_cupy.sparse.linalg._onenormest import onenormest
 
 __all__ = ['expm_multiply']
 

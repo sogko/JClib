@@ -4,7 +4,7 @@ __docformat__ = "restructuredtext en"
 
 __all__ = ['csr_matrix', 'isspmatrix_csr']
 
-import numpy as np
+import cupy as np
 
 from ._base import spmatrix
 from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,

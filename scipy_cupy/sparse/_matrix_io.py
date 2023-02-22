@@ -1,5 +1,5 @@
-import numpy as np
-import scipy.sparse
+import cupy as np
+import scipy_cupy.sparse
 
 __all__ = ['save_npz', 'load_npz']
 

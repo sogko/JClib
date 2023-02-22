@@ -1,7 +1,7 @@
 """Base class for sparse matrices"""
 from warnings import warn
 
-import numpy as np
+import cupy as np
 
 from ._sputils import (asmatrix, check_reshape_kwargs, check_shape,
                        get_sum_dtype, isdense, isintlike, isscalarlike,

@@ -42,15 +42,15 @@ __all__ = ['eigs', 'eigsh', 'ArpackError', 'ArpackNoConvergence']
 from . import _arpack
 arpack_int = _arpack.timing.nbx.dtype
 
-import numpy as np
+import cupy as np
 import warnings
-from scipy.sparse.linalg._interface import aslinearoperator, LinearOperator
-from scipy.sparse import eye, issparse, isspmatrix, isspmatrix_csr
-from scipy.linalg import eig, eigh, lu_factor, lu_solve
-from scipy.sparse._sputils import isdense, is_pydata_spmatrix
-from scipy.sparse.linalg import gmres, splu
-from scipy._lib._util import _aligned_zeros
-from scipy._lib._threadsafety import ReentrancyLock
+from scipy_cupy.sparse.linalg._interface import aslinearoperator, LinearOperator
+from scipy_cupy.sparse import eye, issparse, isspmatrix, isspmatrix_csr
+from scipy_cupy.linalg import eig, eigh, lu_factor, lu_solve
+from scipy_cupy.sparse._sputils import isdense, is_pydata_spmatrix
+from scipy_cupy.sparse.linalg import gmres, splu
+from scipy_cupy._lib._util import _aligned_zeros
+from scipy_cupy._lib._threadsafety import ReentrancyLock
 
 
 _type_conv = {'f': 's', 'd': 'd', 'F': 'c', 'D': 'z'}
