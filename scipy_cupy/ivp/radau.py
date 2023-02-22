@@ -1,4 +1,5 @@
-import numpy as np
+# import numpy as np
+import cupy as np
 from scipy.linalg import lu_factor, lu_solve
 from scipy.sparse import csc_matrix, issparse, eye
 from scipy.sparse.linalg import splu

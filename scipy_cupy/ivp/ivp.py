@@ -1,5 +1,6 @@
 import inspect
-import numpy as np
+# import numpy as np
+import cupy as np
 from .bdf import BDF
 from .radau import Radau
 from .rk import RK23, RK45, DOP853
@@ -600,6 +601,10 @@ def solve_ivp(fun, t_span, y0, method='RK45', t_eval=None, dense_output=False,
         t = solver.t
         y = solver.y
 
+        # sgk handle case when solver returns a float
+        if (isinstance(t, float)):
+            t = np.array([t])
+        
         if dense_output:
             sol = solver.dense_output()
             interpolants.append(sol)
@@ -659,7 +664,9 @@ def solve_ivp(fun, t_span, y0, method='RK45', t_eval=None, dense_output=False,
         y_events = [np.asarray(ye) for ye in y_events]
 
     if t_eval is None:
-        ts = np.array(ts)
+        # sgk
+        # Error: TypeError: Implicit conversion to a NumPy array is not allowed. Please use `.get()` to construct a NumPy array explicitly.
+        # ts = np.array(ts)
         ys = np.vstack(ys).T
     elif ts:
         ts = np.hstack(ts)

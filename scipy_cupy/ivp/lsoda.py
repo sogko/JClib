@@ -1,4 +1,5 @@
-import numpy as np
+# import numpy as np
+import cupy as np
 from scipy.integrate import ode
 from .common import validate_tol, validate_first_step, warn_extraneous
 from .base import OdeSolver, DenseOutput

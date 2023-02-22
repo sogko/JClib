@@ -1,4 +1,5 @@
-import numpy as np
+# import numpy as np
+import cupy as np
 
 N_STAGES = 12
 N_STAGES_EXTENDED = 16

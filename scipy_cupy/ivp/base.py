@@ -1,5 +1,5 @@
-import numpy as np
-
+# import numpy as np
+import cupy as np
 
 def check_arguments(fun, y0, support_complex):
     """Helper function for checking arguments common to all solvers."""
